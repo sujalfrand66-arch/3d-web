@@ -76,16 +76,16 @@ export function ApproachSection() {
       const vH = window.innerHeight;
       cx = vW * 0.5;
       
-      const isMobile = vW < 640;
+      const isMobile = vW < 768;
       // Upper Semicircular Arc Center Y placement:
-      cy = isMobile ? vH * 0.58 : vH * 0.65;
+      cy = isMobile ? vH * 0.54 : vH * 0.65;
 
       // Compact radius for upper arc
-      rx = isMobile ? Math.min(vW * 0.38, 220) : Math.min(vW * 0.36, 460);
-      ry = isMobile ? Math.min(vH * 0.18, 140) : Math.min(vH * 0.26, 210);
+      rx = isMobile ? Math.min(vW * 0.35, 145) : Math.min(vW * 0.36, 460);
+      ry = isMobile ? Math.min(vH * 0.15, 100) : Math.min(vH * 0.26, 210);
 
       // Card width for landscape 16:9 thumbnail format
-      const cardW = isMobile ? Math.min(vW * 0.44, 185) : Math.min(vW * 0.18, 225);
+      const cardW = isMobile ? Math.min(vW * 0.36, 145) : Math.min(vW * 0.18, 225);
       halfW = cardW * 0.5;
       halfH = (cardW * (9 / 16) + 32) * 0.5;
     };
@@ -194,11 +194,11 @@ export function ApproachSection() {
       className="relative w-full h-screen overflow-hidden bg-[#7a0000] text-white"
     >
       {/* Top Header */}
-      <div className="approach-header absolute top-0 left-0 w-full z-30 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 px-6 md:px-16 lg:px-24 pt-8 pb-4 border-b border-white/15">
-        <div className="approach-eyebrow font-sans text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase text-white/80">
+      <div className="approach-header absolute top-0 left-0 w-full z-30 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-4 px-4 sm:px-6 md:px-16 lg:px-24 pt-4 sm:pt-8 pb-3 border-b border-white/15">
+        <div className="approach-eyebrow font-sans text-[9px] sm:text-xs font-bold tracking-[0.25em] sm:tracking-[0.3em] uppercase text-white/80">
           LUSUX WEB / SURATGARH, RAJASTHAN
         </div>
-        <div className="approach-meta flex items-center gap-6 text-[9px] sm:text-[10px] font-sans tracking-[0.25em] uppercase text-white/50">
+        <div className="approach-meta flex items-center gap-4 sm:gap-6 text-[8.5px] sm:text-[10px] font-sans tracking-[0.2em] sm:tracking-[0.25em] uppercase text-white/50">
           <span>04 / CIRCULAR SHOWCASE</span>
           <span>—</span>
           <span>CREATIVE WEB PORTFOLIO</span>
@@ -208,7 +208,7 @@ export function ApproachSection() {
       {/* Background Editorial Headline (Breaths in the open center) */}
       <div
         ref={headlineRef}
-        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 px-6 md:px-16"
+        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 px-4 sm:px-6 md:px-16"
       >
         <h2 className="font-display font-black text-[10vw] sm:text-[8vw] lg:text-[7vw] leading-[0.92] tracking-tighter text-center uppercase">
           <div className="overflow-hidden py-1">
@@ -246,7 +246,7 @@ export function ApproachSection() {
             style={{ willChange: "transform, opacity" }}
           >
             <div
-              className="w-[170px] sm:w-[195px] md:w-[215px] lg:w-[230px] overflow-hidden rounded-xl bg-[#0d0d0d] text-white border border-white/12 p-2 sm:p-2.5 shadow-2xl hover:scale-105 transition-transform duration-200"
+              className="w-[135px] min-[400px]:w-[145px] sm:w-[195px] md:w-[215px] lg:w-[230px] overflow-hidden rounded-xl bg-[#0d0d0d] text-white border border-white/12 p-2 sm:p-2.5 shadow-2xl hover:scale-105 transition-transform duration-200"
               style={{
                 boxShadow:
                   "0 16px 48px rgba(0,0,0,0.45), 0 4px 12px rgba(0,0,0,0.3)",
@@ -264,7 +264,7 @@ export function ApproachSection() {
               </div>
 
               {/* Card Label & Meta */}
-              <div className="mt-1.5 flex justify-between items-center text-[8px] sm:text-[8.5px] font-sans tracking-[0.18em] uppercase text-white/60">
+              <div className="mt-1.5 flex justify-between items-center text-[7.5px] sm:text-[8.5px] font-sans tracking-[0.15em] sm:tracking-[0.18em] uppercase text-white/60">
                 <span className="font-bold text-white/90 truncate mr-1.5">
                   {card.title}
                 </span>
@@ -276,7 +276,7 @@ export function ApproachSection() {
       </div>
 
       {/* Footer Bar */}
-      <div className="approach-footer-bar absolute bottom-0 left-0 w-full z-30 flex justify-between items-center text-[9px] font-sans tracking-[0.25em] uppercase text-white/50 px-6 md:px-16 lg:px-24 py-6 border-t border-white/15">
+      <div className="approach-footer-bar absolute bottom-0 left-0 w-full z-30 flex flex-col sm:flex-row justify-between items-center text-[8.5px] sm:text-[9px] font-sans tracking-[0.2em] sm:tracking-[0.25em] uppercase text-white/50 px-4 sm:px-6 md:px-16 lg:px-24 py-3 sm:py-6 border-t border-white/15 gap-1">
         <span>LUSUX WEB DEVELOPER — FOUNDED 2016</span>
         <span>SCROLL TO CONTINUE ↓</span>
       </div>

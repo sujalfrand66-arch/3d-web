@@ -354,7 +354,7 @@ export function ProjectsSection() {
               onClick={() => handleCardClick(proj.url)}
               onMouseEnter={handleCardMouseEnter}
               onMouseLeave={handleCardMouseLeave}
-              className={`project-card project-card-${idx} absolute top-0 left-0 w-[85vw] sm:w-[58vw] md:w-[46vw] lg:w-[30vw] max-w-[520px] rounded-[4px] border border-white/12 bg-[#0e0e0e] text-white p-3 sm:p-4 shadow-2xl transition-colors duration-300 cursor-pointer`}
+              className={`project-card project-card-${idx} absolute top-0 left-0 w-[64vw] sm:w-[54vw] md:w-[46vw] lg:w-[30vw] max-w-[520px] rounded-[4px] border border-white/12 bg-[#0e0e0e] text-white p-2.5 sm:p-4 shadow-2xl transition-colors duration-300 cursor-pointer`}
               style={{
                 willChange: "transform, opacity",
               }}
