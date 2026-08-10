@@ -164,7 +164,7 @@ export function DiamondTransitionSection() {
       {/* Masked Layer — Revealed INSIDE expanding Center Diamond */}
       <div
         ref={maskLayerRef}
-        className="absolute inset-0 w-full h-full bg-[#F7F7F4] text-[#111111] px-6 md:px-16 lg:px-24 py-8 lg:py-12 flex flex-col overflow-y-hidden"
+        className="absolute inset-0 w-full h-full bg-[#F7F7F4] text-[#111111] px-4 sm:px-6 md:px-16 lg:px-24 py-6 sm:py-8 lg:py-12 flex flex-col overflow-y-auto lg:overflow-y-hidden"
         style={{ willChange: "clip-path" }}
       >
         {/* Header */}

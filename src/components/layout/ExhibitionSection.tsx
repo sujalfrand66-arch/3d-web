@@ -206,7 +206,8 @@ function ExhibitionCamera({ scrollProgress, revealProgress }: CameraRigProps) {
     const my = THREE.MathUtils.damp(0, smoothMouse.current.y, 2.5, delta);
 
     // Camera slides in on reveal (from far to resting position)
-    const baseZ = 7.5 - reveal * 1.2;
+    const isMobile = window.innerWidth < 768;
+    const baseZ = (isMobile ? 9.8 : 7.5) - reveal * 1.2;
     // Scroll: very slight dolly forward + slight lift
     const scrollZ = scroll * 0.8;
     const scrollY = scroll * 0.05;

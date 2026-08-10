@@ -76,16 +76,16 @@ export function ApproachSection() {
       const vH = window.innerHeight;
       cx = vW * 0.5;
       
+      const isMobile = vW < 640;
       // Upper Semicircular Arc Center Y placement:
-      // Places apex (cy - ry) in upper-middle viewport, leaving center area completely empty below
-      cy = vH * 0.65;
+      cy = isMobile ? vH * 0.58 : vH * 0.65;
 
-      // Compact radius for upper arc (does NOT create a giant circle)
-      rx = Math.min(vW * 0.36, 460);
-      ry = Math.min(vH * 0.26, 210);
+      // Compact radius for upper arc
+      rx = isMobile ? Math.min(vW * 0.38, 220) : Math.min(vW * 0.36, 460);
+      ry = isMobile ? Math.min(vH * 0.18, 140) : Math.min(vH * 0.26, 210);
 
       // Card width for landscape 16:9 thumbnail format
-      const cardW = Math.min(vW * 0.18, 225);
+      const cardW = isMobile ? Math.min(vW * 0.44, 185) : Math.min(vW * 0.18, 225);
       halfW = cardW * 0.5;
       halfH = (cardW * (9 / 16) + 32) * 0.5;
     };

@@ -70,9 +70,23 @@ export function ProjectsSection() {
       const numCards = PROJECTS.length;
       const spacing = totalLength / 3.2;
 
+      let svgWidth = section.offsetWidth || window.innerWidth;
+      let svgHeight = section.offsetHeight || window.innerHeight;
+
+      const updateDimensions = () => {
+        if (section) {
+          svgWidth = section.offsetWidth || window.innerWidth;
+          svgHeight = section.offsetHeight || window.innerHeight;
+        }
+      };
+      updateDimensions();
+      window.addEventListener("resize", updateDimensions, { passive: true });
+
       // ── CARD POSITION UPDATE — direct style writes, zero tween allocation ──
       const updateCardPositions = (progress: number) => {
         const travelDistance = progress * (totalLength + spacing * (numCards + 1));
+        const scaleX = svgWidth / 1400;
+        const scaleY = svgHeight / 800;
 
         PROJECTS.forEach((_, idx) => {
           const card = cardRefs.current[idx];
@@ -85,24 +99,30 @@ export function ProjectsSection() {
 
           const aheadDist = Math.max(0, Math.min(totalLength, clampedDistance - 6));
           const aheadPoint = pathEl.getPointAtLength(aheadDist);
-          const dx = aheadPoint.x - point.x;
-          const dy = aheadPoint.y - point.y;
+          const dx = (aheadPoint.x - point.x) * scaleX;
+          const dy = (aheadPoint.y - point.y) * scaleY;
           const angle = Math.atan2(dy, dx) * (180 / Math.PI);
           const tilt = Math.max(-14, Math.min(14, angle * 0.28));
+
+          const realX = point.x * scaleX;
+          const realY = point.y * scaleY;
+
+          const halfW = (card.offsetWidth || 340) * 0.5;
+          const halfH = (card.offsetHeight || 220) * 0.5;
 
           const isVisible = cardDistance > -spacing * 0.4 && cardDistance < totalLength + spacing * 0.4;
           const opacity = isVisible
             ? Math.min(1, Math.max(0, (cardDistance < 120 ? cardDistance / 120 : (totalLength - cardDistance) / 120)))
             : 0;
 
-          const waveHeight = (point.y - 120) / 280;
+          const waveHeight = (realY - 120) / (svgHeight || 800);
           const scale = 0.94 + waveHeight * 0.12;
 
-          card.style.transform = `translate3d(${point.x - 260}px, ${point.y - 150}px, 0) rotate(${tilt}deg) scale(${scale})`;
+          card.style.transform = `translate3d(${realX - halfW}px, ${realY - halfH}px, 0) rotate(${tilt}deg) scale(${scale})`;
           card.style.opacity = `${opacity}`;
           card.style.zIndex = `${Math.floor(20 + waveHeight * 20)}`;
 
-          dot.style.transform = `translate3d(${point.x - 4}px, ${point.y - 4}px, 0)`;
+          dot.style.transform = `translate3d(${realX - 4}px, ${realY - 4}px, 0)`;
           dot.style.opacity = `${opacity * 0.8}`;
         });
       };
@@ -114,8 +134,7 @@ export function ProjectsSection() {
         { opacity: 1, y: 0, duration: 0.4, stagger: 0.1, ease: "power3.out" }
       );
 
-      // ── BGTEXT SCALE — scrubbed timeline, zero per-frame tween allocation ──
-      // LARGE → SMALL when cards travel (5%–85%), then LARGE again
+      // ── BGTEXT SCALE — scrubbed timeline ──
       if (bgText) {
         gsap.fromTo(
           bgText,
@@ -126,7 +145,7 @@ export function ProjectsSection() {
             scrollTrigger: {
               trigger: section,
               start: "top top",
-              end: "+="  + (520 * 0.40) + "%",
+              end: "+=" + (520 * 0.40) + "%",
               scrub: 1.5,
             },
           }
@@ -139,8 +158,8 @@ export function ProjectsSection() {
             ease: "power2.inOut",
             scrollTrigger: {
               trigger: section,
-              start: "+="  + (520 * 0.75) + "%",
-              end: "+="   + (520 * 0.88) + "%",
+              start: "+=" + (520 * 0.75) + "%",
+              end: "+=" + (520 * 0.88) + "%",
               scrub: 1.5,
             },
           }
@@ -157,8 +176,8 @@ export function ProjectsSection() {
         },
       })
         .to(section, { backgroundColor: "#F2F2F0", color: "#000000", duration: 0.35, ease: "none" }, 0)
-        .to(section, { backgroundColor: "#b82424", color: "#ffffff",  duration: 0.35, ease: "power1.inOut" }, 0.35)
-        .to(section, { backgroundColor: "#7a0000", color: "#ffffff",  duration: 0.30, ease: "power1.inOut" }, 0.70);
+        .to(section, { backgroundColor: "#b82424", color: "#ffffff", duration: 0.35, ease: "power1.inOut" }, 0.35)
+        .to(section, { backgroundColor: "#7a0000", color: "#ffffff", duration: 0.30, ease: "power1.inOut" }, 0.70);
 
       // ── BGTEXT COLOR TRANSITION — scrubbed, synced with bg ──
       if (bgText) {
@@ -170,12 +189,12 @@ export function ProjectsSection() {
             scrub: true,
           },
         })
-          .to(bgText, { color: "rgba(0,0,0,0.95)",       duration: 0.35, ease: "none" }, 0)
+          .to(bgText, { color: "rgba(0,0,0,0.95)", duration: 0.35, ease: "none" }, 0)
           .to(bgText, { color: "rgba(255,255,255,0.30)", duration: 0.35, ease: "power1.inOut" }, 0.35)
           .to(bgText, { color: "rgba(255,255,255,0.20)", duration: 0.30, ease: "power1.inOut" }, 0.70);
       }
 
-      // ── MASTER PIN + CARD TRAVERSAL — onUpdate does only direct style writes ──
+      // ── MASTER PIN + CARD TRAVERSAL ──
       ScrollTrigger.create({
         trigger: section,
         start: "top top",

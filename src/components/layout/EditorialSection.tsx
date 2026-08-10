@@ -395,7 +395,7 @@ export function EditorialSection() {
         <div
           className="c01-img-wrap absolute top-0 right-0 bottom-0"
           style={{
-            width: "72vw",
+            width: "min(72vw, 100%)",
             clipPath: "inset(0 100% 0 0)",
             overflow: "hidden",
           }}
@@ -435,7 +435,7 @@ export function EditorialSection() {
               style={{
                 fontFamily: "var(--font-display)",
                 fontWeight: 900,
-                fontSize: "clamp(3.8rem, 10vw, 14rem)",
+                fontSize: "clamp(2.0rem, 8.5vw, 14rem)",
                 lineHeight: 0.9,
                 letterSpacing: "-0.03em",
                 textTransform: "uppercase",
@@ -446,14 +446,14 @@ export function EditorialSection() {
               WE BUILD WEBSITES
             </span>
           </span>
-          <span className="block overflow-hidden" style={{ paddingLeft: "16vw" }}>
+          <span className="block overflow-hidden" style={{ paddingLeft: "clamp(2vw, 16vw, 16vw)" }}>
             <span
               className="ln block will-change-transform"
               style={{
                 fontFamily: "var(--font-serif)",
                 fontWeight: 300,
                 fontStyle: "italic",
-                fontSize: "clamp(3.5rem, 9.5vw, 13rem)",
+                fontSize: "clamp(1.8rem, 8.0vw, 13rem)",
                 lineHeight: 0.9,
                 letterSpacing: "-0.02em",
                 color: TEXT_DARK,

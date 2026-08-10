@@ -56,13 +56,14 @@ export function HeroOverlay() {
       {/* ── Buttons — lower right ── */}
       {/* VIEW WORK: solid red / LET'S TALK: transparent border */}
       <div
-        className="absolute pointer-events-auto flex"
+        className="absolute pointer-events-auto flex flex-wrap"
         style={{
-          right: "clamp(24px, 4.5vw, 64px)",
-          bottom: "clamp(58px, 10vw, 120px)",
+          right: "clamp(16px, 4.5vw, 64px)",
+          bottom: "clamp(48px, 10vw, 120px)",
           gap: "clamp(8px, 1vw, 12px)",
           zIndex: 30,
           alignItems: "center",
+          maxWidth: "calc(100vw - 32px)",
         }}
       >
         {/* VIEW WORK — solid red fill */}

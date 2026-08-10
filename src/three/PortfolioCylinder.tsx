@@ -315,6 +315,11 @@ export function PortfolioCylinder({ scrollProgress }: PortfolioCylinderProps) {
 
     // Direct Y assignment eliminates double-lerp lag and stutter during slow scrolling
     groupRef.current.rotation.y = autoRot.current + scrollRot.current;
+
+    // Uniform responsive scaling: Desktop stays locked at 0.86, mobile viewports fit naturally
+    const vpW = state.viewport.width;
+    const responsiveScale = vpW < 5.8 ? 0.86 * (vpW / 5.8) : 0.86;
+    groupRef.current.scale.setScalar(responsiveScale);
   });
 
   // ── Panel placement ────────────────────────────────────────────────────────

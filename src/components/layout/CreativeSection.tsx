@@ -127,8 +127,10 @@ function CenterObject({ scrollProgress }: { scrollProgress: React.RefObject<numb
     const t = state.clock.getElapsedTime();
     groupRef.current.position.y = Math.sin(t * 0.35) * 0.02;
 
-    // Stable scale (no aggressive zoom)
-    groupRef.current.scale.setScalar(1.0);
+    // Responsive 3D Object Scale for mobile viewports
+    const vpW = state.viewport.width;
+    const targetScale = vpW < 6.5 ? (vpW < 4.2 ? 0.52 : 0.68) : 1.0;
+    groupRef.current.scale.setScalar(targetScale);
 
     // Controlled rotation around Y with subtle tilt
     groupRef.current.rotation.y = autoRot.current + scrollRot.current;

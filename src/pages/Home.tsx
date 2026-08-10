@@ -124,7 +124,7 @@ export function Home() {
               style={{
                 fontFamily: "var(--font-display)",
                 fontWeight: 900,
-                fontSize: "clamp(72px, 17.5vw, 256px)",
+                fontSize: "clamp(28px, 16vw, 256px)",
                 letterSpacing: "0.04em",
                 textTransform: "uppercase",
                 color: "transparent",
@@ -148,7 +148,7 @@ export function Home() {
                 left: 0,
                 fontFamily: "var(--font-display)",
                 fontWeight: 900,
-                fontSize: "clamp(72px, 17.5vw, 256px)",
+                fontSize: "clamp(28px, 16vw, 256px)",
                 letterSpacing: "0.04em",
                 textTransform: "uppercase",
                 color: "transparent",
