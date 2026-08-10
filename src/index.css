@@ -1,0 +1,114 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&f[]=general-sans@300,400,500,600,700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Satoshi", sans-serif;
+  --font-display: "General Sans", sans-serif;
+
+  --color-matte-black: #000000;
+  --color-warm-white: #ffffff;
+  --color-soft-silver: rgba(255, 255, 255, 0.65);
+
+  --animate-fade-in: fade-in 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-up: slide-up 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base Styles */
+@layer base {
+  html,
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Hide standard scrollbars during clean cinematic experiences */
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  ::selection {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+  }
+}
+
+/* Custom Utilities for editorial layouts */
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
+  color: transparent;
+}
+
+.text-stroke-hover:hover {
+  -webkit-text-stroke: 1px transparent;
+  color: #ffffff;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* ── Luxury Editorial Strip ───────────────────────────────────────────────── */
+/* This is NOT a ticker. It is a typographic atmosphere — like ink on paper.   */
+/* The text should feel woven into the background, not placed above it.        */
+.editorial-strip-text {
+  font-family: var(--font-sans);
+
+  /* Ultra-light — barely a whisper */
+  font-weight: 300;
+
+  /* Precise editorial scale — tight strip, not a headline */
+  font-size: clamp(10px, 1.1vw, 15px);
+
+  /* Generous tracking — editorial rhythm */
+  letter-spacing: 0.28em;
+
+  /* Uppercase — structural not decorative */
+  text-transform: uppercase;
+
+  /* Very subtle — anchors the composition without competing */
+  color: rgba(255, 255, 255, 0.22);
+
+  /* Subpixel-accurate rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Inline layout for seamless loop */
+  display: inline-block;
+
+  /* Single unbreakable ribbon */
+  white-space: nowrap;
+}
