@@ -99,12 +99,13 @@ export function Home() {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative w-full bg-black min-h-screen">
+    <div ref={containerRef} className="relative w-full bg-black min-h-screen" style={{ maxWidth: "100vw", overflowX: "hidden" }}>
       {/* ── Pinned Hero Section ── */}
       <div
         ref={heroRef}
         id="hero-section"
         className="relative w-full h-screen overflow-hidden bg-black"
+        style={{ maxWidth: "100vw", overflowX: "hidden" }}
       >
         {/* ──────────────────────────────────────────────────── */}
         {/* Layer 1: Massive XWEBSITEWALA background text       */}

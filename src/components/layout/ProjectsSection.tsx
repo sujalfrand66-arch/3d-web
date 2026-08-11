@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+﻿import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -107,8 +107,8 @@ export function ProjectsSection() {
           const realX = point.x * scaleX;
           const realY = point.y * scaleY;
 
-          const halfW = (card.offsetWidth || 340) * 0.5;
-          const halfH = (card.offsetHeight || 220) * 0.5;
+          const halfW = (card.offsetWidth || (window.innerWidth < 768 ? 280 : 420)) * 0.5;
+          const halfH = (card.offsetHeight || (window.innerWidth < 768 ? 160 : 260)) * 0.5;
 
           const isVisible = cardDistance > -spacing * 0.4 && cardDistance < totalLength + spacing * 0.4;
           const opacity = isVisible
@@ -214,7 +214,6 @@ export function ProjectsSection() {
     return () => ctx.revert();
   }, []);
 
-
   // Custom Cursor Mouse Tracking
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cursorRef.current) return;
@@ -261,15 +260,15 @@ export function ProjectsSection() {
       className="relative w-full h-screen bg-[#F2F2F0] text-[#000000] overflow-hidden"
       style={{
         borderTop: "1px solid rgba(0, 0, 0, 0.08)",
-        /* Prevent mobile cards from expanding document width */
         maxWidth: "100vw",
+        overflowX: "hidden",
       }}
     >
       {/* Custom "VISIT SITE" Cursor Label */}
       <div
         ref={cursorRef}
         aria-hidden="true"
-        className="fixed top-0 left-0 pointer-events-none z-50 px-3.5 py-1.5 bg-black text-white text-[10px] font-sans font-bold tracking-[0.22em] uppercase rounded-full shadow-2xl opacity-0 scale-75"
+        className="fixed top-0 left-0 pointer-events-none z-50 px-3.5 py-1.5 bg-black text-white text-[10px] font-sans font-bold tracking-[0.22em] uppercase rounded-full shadow-2xl opacity-0 scale-75 hidden md:block"
         style={{ transform: "translate(-50%, -50%)", willChange: "transform, opacity" }}
       >
         VISIT SITE
@@ -286,7 +285,7 @@ export function ProjectsSection() {
           </div>
 
           {/* Top Right Navigation */}
-          <nav className="projects-nav flex items-center gap-3 sm:gap-6 md:gap-10 text-[8px] sm:text-[10px] md:text-xs font-sans font-medium tracking-[0.2em] sm:tracking-[0.3em] uppercase transition-colors duration-500">
+          <nav className="projects-nav flex items-center gap-2 sm:gap-6 md:gap-10 text-[8px] sm:text-[10px] md:text-xs font-sans font-medium tracking-[0.18em] sm:tracking-[0.3em] uppercase transition-colors duration-500">
             <span className="cursor-pointer hover:opacity-60 transition-opacity">WORK</span>
             <span className="opacity-30">—</span>
             <span className="cursor-pointer hover:opacity-60 transition-opacity">ABOUT</span>
@@ -298,7 +297,7 @@ export function ProjectsSection() {
         {/* Center Intro Statement & Plus Mark */}
         <div className="projects-intro relative z-30 flex flex-col items-center text-center mt-1 sm:mt-2 lg:mt-4 transition-colors duration-500">
           <p className="font-sans text-[8px] sm:text-[10px] md:text-[11px] font-semibold tracking-[0.22em] sm:tracking-[0.28em] uppercase leading-tight max-w-[200px] sm:max-w-md opacity-80">
-            WE DESIGN & BUILD<br />
+            WE DESIGN &amp; BUILD<br />
             DIGITAL EXPERIENCES<br />
             <span className="opacity-50">/ HERE'S SOME OF OUR WORK</span>
           </p>
@@ -310,7 +309,7 @@ export function ProjectsSection() {
         {/* Display Typography "PROJECTS" (Background Anchor Element — Scales LARGE -> SMALL -> LARGE AGAIN) */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden px-4 sm:px-6 md:px-12">
           <h2
-            className="projects-bg-text font-display font-black leading-none tracking-tighter uppercase transition-colors duration-500"
+            className="projects-bg-text font-display font-black leading-none tracking-tighter uppercase transition-colors duration-500 text-[18vw] sm:text-[20vw] md:text-[18vw]"
             style={{
               userSelect: "none",
               color: "rgba(0, 0, 0, 0.95)",
@@ -343,18 +342,13 @@ export function ProjectsSection() {
             <div
               key={`dot-${proj.id}`}
               ref={(el) => { dotRefs.current[idx] = el; }}
-              className="absolute top-0 left-0 w-2.5 h-2.5 rounded-full bg-black/40 shadow-sm"
+              className="absolute top-0 left-0 w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-black/40 shadow-sm"
               style={{ willChange: "transform, opacity" }}
             />
           ))}
         </div>
 
         {/* Travelling Project Cards along Fixed Wave Track (RIGHT -> LEFT) */}
-        {/*
-          Card container: height is kept large so GSAP can position cards anywhere in the viewport.
-          The cards themselves are sized via CSS — mobile uses smaller clamp() widths.
-          Desktop classes (md: and lg:) are completely untouched.
-        */}
         <div className="relative w-full max-w-[1400px] h-[62vh] lg:h-[68vh] flex items-center justify-center z-20">
           {PROJECTS.map((proj, idx) => (
             <div
@@ -363,22 +357,22 @@ export function ProjectsSection() {
               onClick={() => handleCardClick(proj.url)}
               onMouseEnter={handleCardMouseEnter}
               onMouseLeave={handleCardMouseLeave}
-              className={`project-card project-card-${idx} absolute top-0 left-0 rounded-[4px] border border-white/12 bg-[#0e0e0e] text-white shadow-2xl transition-colors duration-300 cursor-pointer`}
+              className={`project-card project-card-${idx} absolute top-0 left-0 w-[270px] min-[380px]:w-[310px] min-[420px]:w-[340px] sm:w-[420px] md:w-[480px] lg:w-[540px] p-2.5 sm:p-4 md:p-6 rounded-[4px] border border-white/12 bg-[#0e0e0e] text-white shadow-2xl transition-colors duration-300 cursor-pointer`}
               style={{ willChange: "transform, opacity" }}
             >
               {/* Top Hanging Attachment String to Wave Path Connector Pin */}
-              <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-[1px] h-8 md:h-10 md:-top-10 bg-white/25 pointer-events-none" />
+              <div className="absolute -top-6 sm:-top-8 md:-top-10 left-1/2 -translate-x-1/2 w-[1px] h-6 sm:h-8 md:h-10 bg-white/25 pointer-events-none" />
               <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-white/40 pointer-events-none" />
 
               {/* Card Header: Metadata */}
-              <div className="flex justify-between items-center mb-1.5 md:mb-2.5 text-[6px] md:text-[10px] font-sans tracking-[0.15em] md:tracking-[0.25em] uppercase text-white/50 overflow-hidden">
-                <span className="font-display font-light text-[10px] md:text-sm text-white/40 shrink-0">{proj.id}</span>
+              <div className="flex justify-between items-center mb-1.5 md:mb-2.5 text-[7px] sm:text-[8px] md:text-[10px] font-sans tracking-[0.15em] md:tracking-[0.25em] uppercase text-white/50 overflow-hidden">
+                <span className="font-display font-light text-[9px] sm:text-[10px] md:text-sm text-white/40 shrink-0">{proj.id}</span>
                 <span className="truncate mx-1 text-center">{proj.category}</span>
                 <span className="shrink-0">{proj.year}</span>
               </div>
 
               {/* Card Visual Image Frame with Parallax */}
-              <div className="relative w-full aspect-[16/10] overflow-hidden rounded-[2px] bg-[#161616]">
+              <div className="relative w-full aspect-[16/9] overflow-hidden rounded-[2px] bg-[#161616]">
                 <img
                   src={proj.image}
                   alt={proj.title}
@@ -389,19 +383,19 @@ export function ProjectsSection() {
               </div>
 
               {/* Card Footer: Project Title & View Indicator */}
-              <div className="mt-1.5 md:mt-3 flex justify-between items-end">
-                <h3 className="font-sans font-bold text-[9px] md:text-2xl lg:text-3xl tracking-tight text-white leading-tight">
+              <div className="mt-1.5 sm:mt-2 md:mt-3 flex justify-between items-end">
+                <h3 className="font-sans font-bold text-[10px] sm:text-lg md:text-2xl lg:text-3xl tracking-tight text-white leading-tight">
                   {proj.title}
                 </h3>
-                <span className="font-sans text-[7px] md:text-[9px] tracking-[0.15em] md:tracking-[0.2em] text-white/40 uppercase shrink-0 ml-1">
-                  VISIT →
+                <span className="font-sans text-[7px] sm:text-[8px] md:text-[9px] tracking-[0.15em] md:tracking-[0.2em] text-white/40 uppercase shrink-0 ml-1">
+                  VISIT &rarr;
                 </span>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom Editorial Metadata Bar (Generous Bottom Breathing Room) */}
+        {/* Bottom Editorial Metadata Bar */}
         <div className="w-full max-w-[1800px] flex justify-between items-center text-[7px] sm:text-[9px] font-sans tracking-[0.18em] sm:tracking-[0.25em] uppercase opacity-40 z-30 transition-colors duration-500 mb-1 sm:mb-2 overflow-hidden">
           <span className="truncate mr-2">XWEBSITEWALA SHOWCASE</span>
           <span className="shrink-0">RIGHT TO LEFT WAVE STREAM</span>
