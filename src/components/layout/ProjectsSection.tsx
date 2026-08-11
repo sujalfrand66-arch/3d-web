@@ -259,7 +259,11 @@ export function ProjectsSection() {
       id="projects-section"
       onMouseMove={handleMouseMove}
       className="relative w-full h-screen bg-[#F2F2F0] text-[#000000] overflow-hidden"
-      style={{ borderTop: "1px solid rgba(0, 0, 0, 0.08)" }}
+      style={{
+        borderTop: "1px solid rgba(0, 0, 0, 0.08)",
+        /* Prevent mobile cards from expanding document width */
+        maxWidth: "100vw",
+      }}
     >
       {/* Custom "VISIT SITE" Cursor Label */}
       <div
@@ -272,17 +276,17 @@ export function ProjectsSection() {
       </div>
 
       {/* Sticky Content Viewport */}
-      <div className="relative w-full h-full flex flex-col justify-between items-center px-6 md:px-12 lg:px-20 py-8 lg:py-12 overflow-hidden">
+      <div className="relative w-full h-full flex flex-col justify-between items-center px-3 sm:px-6 md:px-12 lg:px-20 py-5 sm:py-8 lg:py-12 overflow-hidden">
         
         {/* Top Header: Top Left Branding & Top Right Navigation */}
         <div className="w-full max-w-[1800px] flex justify-between items-center z-30">
           {/* Top Left Branding */}
-          <div className="projects-brand font-sans font-bold text-sm sm:text-base tracking-[0.25em] uppercase transition-colors duration-500">
+          <div className="projects-brand font-sans font-bold text-[10px] sm:text-sm md:text-base tracking-[0.18em] sm:tracking-[0.25em] uppercase transition-colors duration-500">
             XWEBSITEWALA
           </div>
 
           {/* Top Right Navigation */}
-          <nav className="projects-nav flex items-center gap-6 sm:gap-10 text-[10px] sm:text-xs font-sans font-medium tracking-[0.3em] uppercase transition-colors duration-500">
+          <nav className="projects-nav flex items-center gap-3 sm:gap-6 md:gap-10 text-[8px] sm:text-[10px] md:text-xs font-sans font-medium tracking-[0.2em] sm:tracking-[0.3em] uppercase transition-colors duration-500">
             <span className="cursor-pointer hover:opacity-60 transition-opacity">WORK</span>
             <span className="opacity-30">—</span>
             <span className="cursor-pointer hover:opacity-60 transition-opacity">ABOUT</span>
@@ -292,21 +296,21 @@ export function ProjectsSection() {
         </div>
 
         {/* Center Intro Statement & Plus Mark */}
-        <div className="projects-intro relative z-30 flex flex-col items-center text-center mt-2 lg:mt-4 transition-colors duration-500">
-          <p className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.28em] uppercase leading-tight max-w-md opacity-80">
+        <div className="projects-intro relative z-30 flex flex-col items-center text-center mt-1 sm:mt-2 lg:mt-4 transition-colors duration-500">
+          <p className="font-sans text-[8px] sm:text-[10px] md:text-[11px] font-semibold tracking-[0.22em] sm:tracking-[0.28em] uppercase leading-tight max-w-[200px] sm:max-w-md opacity-80">
             WE DESIGN & BUILD<br />
             DIGITAL EXPERIENCES<br />
             <span className="opacity-50">/ HERE'S SOME OF OUR WORK</span>
           </p>
-          <div className="opacity-50 text-xs font-mono font-bold my-2 select-none">
+          <div className="opacity-50 text-xs font-mono font-bold my-1 sm:my-2 select-none">
             +
           </div>
         </div>
 
         {/* Display Typography "PROJECTS" (Background Anchor Element — Scales LARGE -> SMALL -> LARGE AGAIN) */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden px-6 md:px-12">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden px-4 sm:px-6 md:px-12">
           <h2
-            className="projects-bg-text font-display font-black text-[22vw] leading-none tracking-tighter uppercase transition-colors duration-500"
+            className="projects-bg-text font-display font-black leading-none tracking-tighter uppercase transition-colors duration-500"
             style={{
               userSelect: "none",
               color: "rgba(0, 0, 0, 0.95)",
@@ -346,6 +350,11 @@ export function ProjectsSection() {
         </div>
 
         {/* Travelling Project Cards along Fixed Wave Track (RIGHT -> LEFT) */}
+        {/*
+          Card container: height is kept large so GSAP can position cards anywhere in the viewport.
+          The cards themselves are sized via CSS — mobile uses smaller clamp() widths.
+          Desktop classes (md: and lg:) are completely untouched.
+        */}
         <div className="relative w-full max-w-[1400px] h-[62vh] lg:h-[68vh] flex items-center justify-center z-20">
           {PROJECTS.map((proj, idx) => (
             <div
@@ -354,20 +363,18 @@ export function ProjectsSection() {
               onClick={() => handleCardClick(proj.url)}
               onMouseEnter={handleCardMouseEnter}
               onMouseLeave={handleCardMouseLeave}
-              className={`project-card project-card-${idx} absolute top-0 left-0 w-[64vw] sm:w-[54vw] md:w-[46vw] lg:w-[30vw] max-w-[520px] rounded-[4px] border border-white/12 bg-[#0e0e0e] text-white p-2.5 sm:p-4 shadow-2xl transition-colors duration-300 cursor-pointer`}
-              style={{
-                willChange: "transform, opacity",
-              }}
+              className={`project-card project-card-${idx} absolute top-0 left-0 rounded-[4px] border border-white/12 bg-[#0e0e0e] text-white shadow-2xl transition-colors duration-300 cursor-pointer`}
+              style={{ willChange: "transform, opacity" }}
             >
               {/* Top Hanging Attachment String to Wave Path Connector Pin */}
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[1px] h-10 bg-white/25 pointer-events-none" />
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-[1px] h-8 md:h-10 md:-top-10 bg-white/25 pointer-events-none" />
               <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-white/40 pointer-events-none" />
 
               {/* Card Header: Metadata */}
-              <div className="flex justify-between items-center mb-2.5 text-[9px] sm:text-[10px] font-sans tracking-[0.25em] uppercase text-white/50">
-                <span className="font-display font-light text-sm text-white/40">{proj.id}</span>
-                <span>{proj.category}</span>
-                <span>{proj.year}</span>
+              <div className="flex justify-between items-center mb-1.5 md:mb-2.5 text-[6px] md:text-[10px] font-sans tracking-[0.15em] md:tracking-[0.25em] uppercase text-white/50 overflow-hidden">
+                <span className="font-display font-light text-[10px] md:text-sm text-white/40 shrink-0">{proj.id}</span>
+                <span className="truncate mx-1 text-center">{proj.category}</span>
+                <span className="shrink-0">{proj.year}</span>
               </div>
 
               {/* Card Visual Image Frame with Parallax */}
@@ -382,11 +389,11 @@ export function ProjectsSection() {
               </div>
 
               {/* Card Footer: Project Title & View Indicator */}
-              <div className="mt-3 flex justify-between items-end">
-                <h3 className="font-sans font-bold text-lg sm:text-2xl lg:text-3xl tracking-tight text-white">
+              <div className="mt-1.5 md:mt-3 flex justify-between items-end">
+                <h3 className="font-sans font-bold text-[9px] md:text-2xl lg:text-3xl tracking-tight text-white leading-tight">
                   {proj.title}
                 </h3>
-                <span className="font-sans text-[9px] tracking-[0.2em] text-white/40 uppercase">
+                <span className="font-sans text-[7px] md:text-[9px] tracking-[0.15em] md:tracking-[0.2em] text-white/40 uppercase shrink-0 ml-1">
                   VISIT →
                 </span>
               </div>
@@ -395,9 +402,9 @@ export function ProjectsSection() {
         </div>
 
         {/* Bottom Editorial Metadata Bar (Generous Bottom Breathing Room) */}
-        <div className="w-full max-w-[1800px] flex justify-between items-center text-[9px] font-sans tracking-[0.25em] uppercase opacity-40 z-30 transition-colors duration-500 mb-2">
-          <span>XWEBSITEWALA SHOWCASE</span>
-          <span>RIGHT TO LEFT WAVE STREAM</span>
+        <div className="w-full max-w-[1800px] flex justify-between items-center text-[7px] sm:text-[9px] font-sans tracking-[0.18em] sm:tracking-[0.25em] uppercase opacity-40 z-30 transition-colors duration-500 mb-1 sm:mb-2 overflow-hidden">
+          <span className="truncate mr-2">XWEBSITEWALA SHOWCASE</span>
+          <span className="shrink-0">RIGHT TO LEFT WAVE STREAM</span>
         </div>
 
       </div>

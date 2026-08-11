@@ -1,288 +1,226 @@
-import { useEffect, useRef } from "react";
+﻿import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { IconCloud } from "../ui/interactive-icon-cloud";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ROUND_CARDS = [
-  {
-    id: "01",
-    title: "GLAMOUR MAKEOVER",
-    category: "BEAUTY & LIFESTYLE",
-    image: "/assets/ed-02.png",
-    url: "https://glamourmakeover.com",
-  },
-  {
-    id: "02",
-    title: "MANTOLA CORPORATE",
-    category: "CORPORATE IDENTITY",
-    image: "/assets/exhibit-wide.png",
-    url: "https://mantola.in",
-  },
-  {
-    id: "03",
-    title: "RAJWADA FURNISH",
-    category: "E-COMMERCE FLAGSHIP",
-    image: "/assets/showcase-screen-horizontal.png",
-    url: "https://rajwadafurnish.com",
-  },
-  {
-    id: "04",
-    title: "SURATGARH PROPERTIES",
-    category: "REAL ESTATE PORTAL",
-    image: "/assets/horizontal-showcase.png",
-    url: "https://suratgarhproperties.com",
-  },
-  {
-    id: "05",
-    title: "LUXURY INTERIORS",
-    category: "ARCHITECTURAL DESIGN",
-    image: "/assets/ed-01.png",
-    url: "#",
-  },
-  {
-    id: "06",
-    title: "STUDIO PORTFOLIO",
-    category: "CREATIVE DIRECTION",
-    image: "/assets/ed-03.png",
-    url: "#",
-  },
+const TECH_SLUGS = [
+  "typescript",
+  "javascript",
+  "react",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "nextdotjs",
+  "vite",
+  "threedotjs",
+  "firebase",
+  "git",
+  "github",
+  "figma",
+  "laravel",
+  "php",
+  "wordpress",
+  "vercel",
 ];
-
-const N_CARDS = ROUND_CARDS.length;
-// Precompute static base angles around the continuous path loop
-const BASE_ANGLES = ROUND_CARDS.map((_, i) => (i / N_CARDS) * 2 * Math.PI);
 
 export function ApproachSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const headlineRef = useRef<HTMLDivElement>(null);
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const scrollProgressRef = useRef(0);
-  const autoAngleRef = useRef(0);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const textGroupRef = useRef<HTMLDivElement>(null);
+  const builtWithLineRef = useRef<HTMLSpanElement>(null);
+  const modernTechLineRef = useRef<HTMLSpanElement>(null);
+  const cloudContainerRef = useRef<HTMLDivElement>(null);
+  const footerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
 
-    let cx = 0;
-    let cy = 0;
-    let rx = 0;
-    let ry = 0;
-    let halfW = 0;
-    let halfH = 0;
-
-    const updateGeometry = () => {
-      const vW = window.innerWidth;
-      const vH = window.innerHeight;
-      cx = vW * 0.5;
-      
-      const isMobile = vW < 768;
-      // Upper Semicircular Arc Center Y placement:
-      cy = isMobile ? vH * 0.54 : vH * 0.65;
-
-      // Compact radius for upper arc
-      rx = isMobile ? Math.min(vW * 0.35, 145) : Math.min(vW * 0.36, 460);
-      ry = isMobile ? Math.min(vH * 0.15, 100) : Math.min(vH * 0.26, 210);
-
-      // Card width for landscape 16:9 thumbnail format
-      const cardW = isMobile ? Math.min(vW * 0.36, 145) : Math.min(vW * 0.18, 225);
-      halfW = cardW * 0.5;
-      halfH = (cardW * (9 / 16) + 32) * 0.5;
-    };
-
-    updateGeometry();
-    window.addEventListener("resize", updateGeometry, { passive: true });
-
-    const validCards: HTMLDivElement[] = [];
-    cardRefs.current.forEach((el) => {
-      if (el) validCards.push(el);
-    });
-    const lastZIndex = new Array(validCards.length).fill(-1);
-
-    // Continuous Upper Semicircular Arc Motion Update (synchronized with GSAP ticker)
-    const updateArcPositions = () => {
-      const scrollA = scrollProgressRef.current * Math.PI * 2.8;
-      const autoA = autoAngleRef.current;
-
-      for (let i = 0; i < validCards.length; i++) {
-        const card = validCards[i];
-        
-        // base angle + continuous progress
-        const rawAngle = BASE_ANGLES[i] + autoA + scrollA;
-        
-        // Normalize angle to [-PI, PI]
-        const normAngle = Math.atan2(Math.sin(rawAngle), Math.cos(rawAngle));
-
-        // Inverse theta so cards progress RIGHT (+theta) -> TOP/CENTER (0) -> LEFT (-theta)
-        const theta = -normAngle;
-
-        const sinVal = Math.sin(theta);
-        const cosVal = Math.cos(theta);
-
-        // Position ONLY on upper arc: x = cx + rx * sin(theta), y = cy - ry * cos(theta)
-        const x = cx + rx * sinVal;
-        const y = cy - ry * cosVal;
-
-        // Tangential rotation along upper arc: TOP/CENTER = 0deg (upright), RIGHT = +clockwise, LEFT = -counter-clockwise
-        const tilt = sinVal * 24;
-
-        // Subtle depth scaling (top center = 1.00, lower sides = 0.94)
-        const scale = 0.94 + 0.06 * Math.max(0, cosVal);
-
-        // Smooth Opacity Fade at upper arc extremities (|theta| > 1.30 rad ~ 75deg)
-        // Keeps the center and bottom area 100% EMPTY and clean!
-        const absTheta = Math.abs(theta);
-        let opacity = 1.0;
-        if (absTheta > 1.30) {
-          opacity = Math.max(0, 1.0 - (absTheta - 1.30) / 0.25);
-        }
-
-        // Z-Index ordering so center top cards sit above side cards
-        const zIndex = Math.floor(20 + cosVal * 15);
-        if (lastZIndex[i] !== zIndex) {
-          card.style.zIndex = `${zIndex}`;
-          lastZIndex[i] = zIndex;
-        }
-
-        const posX = (x - halfW).toFixed(2);
-        const posY = (y - halfH).toFixed(2);
-        const rot = tilt.toFixed(2);
-        const sc = scale.toFixed(3);
-        const op = opacity.toFixed(3);
-
-        card.style.transform = `translate3d(${posX}px, ${posY}px, 0) rotate(${rot}deg) scale(${sc})`;
-        card.style.opacity = op;
-      }
-    };
-
-    // Synchronize smooth continuous movement along upper arc with GSAP Ticker
-    const onTickerUpdate = (_time: number, deltaTime: number) => {
-      const deltaSec = Math.min(deltaTime / 1000, 0.1);
-      autoAngleRef.current += deltaSec * 0.16; // smooth continuous traversal (~0.16 rad/sec)
-      updateArcPositions();
-    };
-
-    gsap.ticker.add(onTickerUpdate);
-
-    // ScrollTrigger Pinned Section — Progress tracking
     const ctx = gsap.context(() => {
+      // 1. Pinned ScrollTrigger container
       ScrollTrigger.create({
         trigger: section,
         start: "top top",
-        end: "+=350%",
+        end: "+=200%",
         pin: true,
         pinSpacing: true,
         scrub: 1,
         anticipatePin: 1,
-        onUpdate: (self) => {
-          scrollProgressRef.current = self.progress;
+      });
+
+      const isMobile = window.innerWidth < 768;
+
+      // 2. Coordinated GSAP Entrance Timeline (Responsive text entrance from Left + Red-to-White BG transition)
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
         },
       });
+
+      // Step A: Header & Footer Entrance
+      tl.fromTo(
+        [headerRef.current, footerRef.current],
+        { opacity: 0, y: (i) => (i === 0 ? -12 : 12) },
+        { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
+        0
+      );
+
+      // Step B: Text travels smoothly from LEFT side toward CENTER (Mobile uses -55%, Desktop uses -85%)
+      tl.fromTo(
+        textGroupRef.current,
+        {
+          xPercent: isMobile ? -55 : -85,
+          opacity: 0,
+        },
+        {
+          xPercent: 0,
+          opacity: 1,
+          duration: isMobile ? 1.05 : 1.25,
+          ease: "expo.out",
+        },
+        0.05
+      );
+
+      // Step C: As text approaches center, Background transitions RED (#7a0000) -> WHITE (#F2F2F0)
+      tl.to(
+        section,
+        {
+          backgroundColor: "#F2F2F0",
+          duration: 1.0,
+          ease: "power2.inOut",
+        },
+        0.45
+      );
+
+      // Step D: Text colors adapt for high readability on WHITE background
+      if (builtWithLineRef.current && modernTechLineRef.current) {
+        tl.to(
+          builtWithLineRef.current,
+          {
+            color: "rgba(0, 0, 0, 0.22)",
+            duration: 0.9,
+            ease: "power2.inOut",
+          },
+          0.5
+        );
+        tl.to(
+          modernTechLineRef.current,
+          {
+            color: "#000000",
+            duration: 0.9,
+            ease: "power2.inOut",
+          },
+          0.5
+        );
+      }
+
+      // Step E: Header & Footer text/border colors adapt to dark text on white
+      tl.to(
+        [headerRef.current, footerRef.current],
+        {
+          color: "rgba(0, 0, 0, 0.65)",
+          borderColor: "rgba(0, 0, 0, 0.15)",
+          duration: 0.9,
+          ease: "power2.inOut",
+        },
+        0.5
+      );
+
+      // Step F: IconCloud smoothly zooms in as background reaches WHITE
+      tl.fromTo(
+        cloudContainerRef.current,
+        {
+          opacity: 0,
+          scale: isMobile ? 0.8 : 0.7,
+          y: isMobile ? 12 : 20,
+          filter: "blur(4px)",
+        },
+        {
+          opacity: 1,
+          scale: 1.0,
+          y: 0,
+          filter: "blur(0px)",
+          duration: isMobile ? 1.0 : 1.15,
+          ease: "expo.out",
+        },
+        0.6
+      );
     }, section);
 
-    return () => {
-      gsap.ticker.remove(onTickerUpdate);
-      ctx.revert();
-      window.removeEventListener("resize", updateGeometry);
-    };
+    return () => ctx.revert();
   }, []);
 
   return (
     <div
       ref={sectionRef}
       id="approach-section"
-      className="relative w-full h-screen overflow-hidden bg-[#7a0000] text-white"
+      className="relative w-full h-screen overflow-hidden bg-[#7a0000] text-white select-none flex flex-col justify-between"
+      style={{ maxWidth: "100vw", overflowX: "hidden" }}
     >
       {/* Top Header */}
-      <div className="approach-header absolute top-0 left-0 w-full z-30 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-4 px-4 sm:px-6 md:px-16 lg:px-24 pt-4 sm:pt-8 pb-3 border-b border-white/15">
-        <div className="approach-eyebrow font-sans text-[9px] sm:text-xs font-bold tracking-[0.25em] sm:tracking-[0.3em] uppercase text-white/80">
-          LUSUX WEB / SURATGARH, RAJASTHAN
+      <div
+        ref={headerRef}
+        className="relative z-30 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1.5 sm:gap-2 px-4 sm:px-6 md:px-16 lg:px-24 pt-3 sm:pt-8 pb-2.5 sm:pb-3 border-b border-white/15 transition-colors duration-500"
+      >
+        <div className="font-sans text-[8.5px] sm:text-xs font-bold tracking-[0.22em] sm:tracking-[0.3em] uppercase">
+          XWEBSITEWALA / SURATGARH, RAJASTHAN
         </div>
-        <div className="approach-meta flex items-center gap-4 sm:gap-6 text-[8.5px] sm:text-[10px] font-sans tracking-[0.2em] sm:tracking-[0.25em] uppercase text-white/50">
-          <span>04 / CIRCULAR SHOWCASE</span>
-          <span>—</span>
+        <div className="flex items-center gap-3 sm:gap-6 text-[8px] sm:text-[10px] font-sans tracking-[0.18em] sm:tracking-[0.25em] uppercase opacity-70">
+          <span>04 / TECH STACK</span>
+          <span>&mdash;</span>
           <span>CREATIVE WEB PORTFOLIO</span>
         </div>
       </div>
 
-      {/* Background Editorial Headline (Breaths in the open center) */}
+      {/* Main Unified Composition: Editorial Headline + Overlaying 3D Icon Cloud */}
+      <div className="relative z-20 flex-1 flex flex-col items-center justify-center px-3 sm:px-6 py-2 sm:py-4 overflow-hidden">
+        {/* Layer 1: Large Editorial Typography (Travels smoothly from LEFT -> CENTER) */}
+        <div
+          ref={textGroupRef}
+          className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none z-0 px-3 sm:px-4"
+        >
+          <p className="font-sans text-[8px] sm:text-[11px] font-bold tracking-[0.28em] sm:tracking-[0.38em] uppercase opacity-40 mb-1.5 sm:mb-4 text-center">
+            DIGITAL CRAFT &amp; ENGINEERING
+          </p>
+          <h2 className="font-display font-black text-[11vw] min-[400px]:text-[10vw] sm:text-[9vw] lg:text-[8vw] leading-[0.88] tracking-tighter text-center uppercase">
+            <span ref={builtWithLineRef} className="block text-white/20 transition-colors duration-500">
+              BUILT WITH
+            </span>
+            <span ref={modernTechLineRef} className="block text-white transition-colors duration-500">
+              MODERN TECH.
+            </span>
+          </h2>
+        </div>
+
+        {/* Layer 2: Interactive Icon Cloud (Composed seamlessly in the visual center) */}
+        <div
+          ref={cloudContainerRef}
+          className="relative w-full max-w-[260px] min-[380px]:max-w-[310px] sm:max-w-[380px] md:max-w-[460px] lg:max-w-[520px] aspect-square flex items-center justify-center pointer-events-auto z-10"
+        >
+          {/* Soft, ultra-subtle radial separation light */}
+          <div className="absolute inset-0 rounded-full bg-black/5 blur-3xl pointer-events-none z-0" />
+
+          {/* Interactive Cloud */}
+          <div className="relative z-10 w-full h-full flex items-center justify-center">
+            <IconCloud iconSlugs={TECH_SLUGS} />
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Footer Bar */}
       <div
-        ref={headlineRef}
-        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 px-4 sm:px-6 md:px-16"
+        ref={footerRef}
+        className="relative z-30 flex flex-col sm:flex-row justify-between items-center text-[8px] sm:text-[9px] font-sans tracking-[0.18em] sm:tracking-[0.25em] uppercase opacity-70 px-4 sm:px-6 md:px-16 lg:px-24 py-2.5 sm:py-6 border-t border-white/15 gap-1 transition-colors duration-500"
       >
-        <h2 className="font-display font-black text-[10vw] sm:text-[8vw] lg:text-[7vw] leading-[0.92] tracking-tighter text-center uppercase">
-          <div className="overflow-hidden py-1">
-            <span className="line-inner block text-white">
-              FAST MODERN
-            </span>
-          </div>
-          <div className="overflow-hidden py-1">
-            <span className="line-inner block text-white/35">
-              WEBSITES FROM
-            </span>
-          </div>
-          <div className="overflow-hidden py-1">
-            <span className="line-inner block text-white">
-              SURATGARH.
-            </span>
-          </div>
-        </h2>
-      </div>
-
-      {/* Clean Upper Semicircular Arc Layer for 16:9 Project Cards */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none z-20 overflow-hidden">
-        {ROUND_CARDS.map((card, i) => (
-          <div
-            key={card.id}
-            ref={(el) => {
-              cardRefs.current[i] = el;
-            }}
-            className="absolute top-0 left-0 select-none pointer-events-auto cursor-pointer"
-            onClick={() => {
-              if (card.url && card.url !== "#") {
-                window.open(card.url, "_blank", "noopener,noreferrer");
-              }
-            }}
-            style={{ willChange: "transform, opacity" }}
-          >
-            <div
-              className="w-[135px] min-[400px]:w-[145px] sm:w-[195px] md:w-[215px] lg:w-[230px] overflow-hidden rounded-xl bg-[#0d0d0d] text-white border border-white/12 p-2 sm:p-2.5 shadow-2xl hover:scale-105 transition-transform duration-200"
-              style={{
-                boxShadow:
-                  "0 16px 48px rgba(0,0,0,0.45), 0 4px 12px rgba(0,0,0,0.3)",
-              }}
-            >
-              {/* 16:9 Landscape Website Preview Frame */}
-              <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg bg-[#161616]">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-full object-cover object-top block"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-
-              {/* Card Label & Meta */}
-              <div className="mt-1.5 flex justify-between items-center text-[7.5px] sm:text-[8.5px] font-sans tracking-[0.15em] sm:tracking-[0.18em] uppercase text-white/60">
-                <span className="font-bold text-white/90 truncate mr-1.5">
-                  {card.title}
-                </span>
-                <span className="text-white/40 shrink-0">↗</span>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Footer Bar */}
-      <div className="approach-footer-bar absolute bottom-0 left-0 w-full z-30 flex flex-col sm:flex-row justify-between items-center text-[8.5px] sm:text-[9px] font-sans tracking-[0.2em] sm:tracking-[0.25em] uppercase text-white/50 px-4 sm:px-6 md:px-16 lg:px-24 py-3 sm:py-6 border-t border-white/15 gap-1">
-        <span>LUSUX WEB DEVELOPER — FOUNDED 2016</span>
-        <span>SCROLL TO CONTINUE ↓</span>
+        <span>XWEBSITEWALA &mdash; FOUNDED 2016</span>
+        <span>SCROLL TO CONTINUE &#x2193;</span>
       </div>
     </div>
   );
 }
 
 export default ApproachSection;
-
