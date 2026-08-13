@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -16,35 +16,67 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     id: "01",
-    title: "GLAMOUR MAKEOVER",
-    category: "BEAUTY & LIFESTYLE",
+    title: "SURATGARH PROPERTIES",
+    category: "REAL ESTATE PORTAL",
     year: "2026",
-    image: "/assets/ed-02.png",
-    url: "https://glamourmakeover.com",
+    image: "/assets/projects/suratgarh-properties.webp",
+    url: "https://suratgarhproperties.shop/",
   },
   {
     id: "02",
-    title: "MANTOLA CORPORATE",
-    category: "CORPORATE IDENTITY",
+    title: "GLAMOUR MAKEOVER",
+    category: "BEAUTY & LIFESTYLE",
     year: "2026",
-    image: "/assets/exhibit-wide.png",
-    url: "https://mantola.in",
+    image: "/assets/projects/glamour-makeover.webp",
+    url: "https://glamourmakeover.in/",
   },
   {
     id: "03",
-    title: "RAJWADA FURNISH",
-    category: "E-COMMERCE FLAGSHIP",
-    year: "2025",
-    image: "/assets/showcase-screen-horizontal.png",
-    url: "https://rajwadafurnish.com",
+    title: "MEGHNA MOTORS",
+    category: "AUTOMOTIVE DEALERSHIP",
+    year: "2026",
+    image: "/assets/projects/meghna-motors.webp",
+    url: "https://meghnamotors.online/",
   },
   {
     id: "04",
-    title: "SURATGARH PROPERTIES",
-    category: "REAL ESTATE PORTAL",
+    title: "PARMARTH MEDICOSE",
+    category: "PHARMACY & HEALTHCARE",
     year: "2025",
-    image: "/assets/horizontal-showcase.png",
-    url: "https://suratgarhproperties.com",
+    image: "/assets/projects/parmarth-medicose.webp",
+    url: "https://parmarthmedicose.store/",
+  },
+  {
+    id: "05",
+    title: "RAJWADA FURNISH",
+    category: "LUXURY FURNITURE & DECOR",
+    year: "2025",
+    image: "/assets/projects/rajwada-furnish.webp",
+    url: "https://www.rajwadafurnish.com/",
+  },
+  {
+    id: "06",
+    title: "CHAWLA SILK STORE",
+    category: "ETHNIC WEAR & SILKS",
+    year: "2025",
+    image: "/assets/projects/chawla-silk-store.webp",
+    url: "https://chawlasilkstore.com/",
+  },
+  {
+    id: "07",
+    title: "GROSHINE CONSULTANTS",
+    category: "BUSINESS & CONSULTING",
+    year: "2025",
+    image: "/assets/projects/groshine-consultants.webp",
+    url: "https://groshineconsultants.com/",
+  },
+  {
+    id: "08",
+    title: "MANTOLA OF MOTORS",
+    category: "AUTOMOTIVE CARE & SERVICES",
+    year: "2025",
+    image: "/assets/projects/mantola-motors.webp",
+    url: "https://mantola.in/",
   },
 ];
 
@@ -107,8 +139,8 @@ export function ProjectsSection() {
           const realX = point.x * scaleX;
           const realY = point.y * scaleY;
 
-          const halfW = (card.offsetWidth || (window.innerWidth < 768 ? 280 : 420)) * 0.5;
-          const halfH = (card.offsetHeight || (window.innerWidth < 768 ? 160 : 260)) * 0.5;
+          const halfW = (card.offsetWidth || (window.innerWidth < 768 ? 130 : 270)) * 0.5;
+          const halfH = (card.offsetHeight || (window.innerWidth < 768 ? 90 : 180)) * 0.5;
 
           const isVisible = cardDistance > -spacing * 0.4 && cardDistance < totalLength + spacing * 0.4;
           const opacity = isVisible
@@ -357,7 +389,7 @@ export function ProjectsSection() {
               onClick={() => handleCardClick(proj.url)}
               onMouseEnter={handleCardMouseEnter}
               onMouseLeave={handleCardMouseLeave}
-              className={`project-card project-card-${idx} absolute top-0 left-0 w-[270px] min-[380px]:w-[310px] min-[420px]:w-[340px] sm:w-[420px] md:w-[480px] lg:w-[540px] p-2.5 sm:p-4 md:p-6 rounded-[4px] border border-white/12 bg-[#0e0e0e] text-white shadow-2xl transition-colors duration-300 cursor-pointer`}
+              className={`project-card project-card-${idx} absolute top-0 left-0 w-[210px] min-[360px]:w-[235px] min-[400px]:w-[260px] min-[480px]:w-[310px] sm:w-[420px] md:w-[480px] lg:w-[540px] p-2 sm:p-4 md:p-6 rounded-[4px] border border-white/12 bg-[#0e0e0e] text-white shadow-2xl transition-colors duration-300 cursor-pointer`}
               style={{ willChange: "transform, opacity" }}
             >
               {/* Top Hanging Attachment String to Wave Path Connector Pin */}
