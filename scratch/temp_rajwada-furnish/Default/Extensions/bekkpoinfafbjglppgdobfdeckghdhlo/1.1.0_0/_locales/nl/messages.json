@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "Emuleer CRX-bestanden in je browser"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "Machtigingen toestaan"
+   },
+   "opt_cancel": {
+      "message": "Annuleren"
+   },
+   "opt_confirm": {
+      "message": "Bevestigen"
+   },
+   "opt_downloaded": {
+      "message": "Succesvol gedownload"
+   },
+   "opt_downloaded_subtext": {
+      "message": "De extensie is succesvol gedownload"
+   },
+   "opt_downloading": {
+      "message": "Extensie downloaden..."
+   },
+   "opt_downloading_subtext": {
+      "message": "Bezig met het downloaden van de extensie voor installatie"
+   },
+   "opt_enable_extension_warning": {
+      "message": "vereist machtigingen om de installatie voort te zetten."
+   },
+   "opt_enable_installing": {
+      "message": "Bezig met installeren..."
+   },
+   "opt_extension": {
+      "message": "Extensie"
+   },
+   "opt_extension_already_installed": {
+      "message": "Er is al een extensie geïnstalleerd."
+   },
+   "opt_extracted": {
+      "message": "Extensie uitgepakt"
+   },
+   "opt_extracted_subtext": {
+      "message": "Extensiebestanden zijn succesvol uitgepakt"
+   },
+   "opt_extracting": {
+      "message": "Extensie uitpakken..."
+   },
+   "opt_extracting_subtext": {
+      "message": "Bestanden voorbereiden voor installatie"
+   },
+   "opt_formats": {
+      "message": "Toegestane formaten"
+   },
+   "opt_get_started": {
+      "message": "Aan de slag"
+   },
+   "opt_grant_permissions": {
+      "message": "Machtigingen verlenen"
+   },
+   "opt_installed": {
+      "message": "Machtigingen verleend"
+   },
+   "opt_installed_subtext": {
+      "message": "Extensie succesvol geïnstalleerd"
+   },
+   "opt_installing": {
+      "message": "Extensie installeren..."
+   },
+   "opt_installing_subtext": {
+      "message": "Geef de benodigde machtigingen om door te gaan"
+   },
+   "opt_invalid_file": {
+      "message": "Het geselecteerde bestand wordt niet ondersteund."
+   },
+   "opt_no_options": {
+      "message": "heeft geen instellingenpagina."
+   },
+   "opt_no_updates": {
+      "message": "Geen updates beschikbaar voor de extensie."
+   },
+   "opt_permissions_required": {
+      "message": "De installatie kan niet doorgaan zonder de vereiste machtigingen."
+   },
+   "opt_remove": {
+      "message": "Verwijderen"
+   },
+   "opt_remove_confirm": {
+      "message": "Weet je het zeker?"
+   },
+   "opt_subtext": {
+      "message": "Upload je bestand hieronder en wij doen de rest! Zorg ervoor dat je extensie compatibel is met de ondersteunde machtigingen en API's voor een soepele installatie."
+   },
+   "opt_updated": {
+      "message": "Extensie is succesvol bijgewerkt."
+   },
+   "opt_updating": {
+      "message": "Extensie bijwerken naar de nieuwste versie"
+   },
+   "opt_upload": {
+      "message": "Extensie uploaden"
+   },
+   "opt_version": {
+      "message": "Versie"
+   }
+}

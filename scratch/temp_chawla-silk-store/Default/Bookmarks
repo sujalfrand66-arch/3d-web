@@ -1,0 +1,83 @@
+{
+   "checksum": "810c4782433a8710c5f9f8de83613244",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13420392641093343",
+            "date_last_used": "0",
+            "guid": "e853a87c-3993-4332-8269-2f5b8978ecc5",
+            "id": "7",
+            "name": "IF Editor – photo & video editin your digital cretor",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://lfeditor.in/",
+            "visit_count": 1
+         }, {
+            "date_added": "13425331727537589",
+            "date_last_used": "0",
+            "guid": "3180f63d-f8c6-4810-8bd3-d62f1cb8b5a4",
+            "id": "8",
+            "name": "Result Sheet - QEWQ",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://127.0.0.1:8000/admin/results/8/show",
+            "visit_count": 1
+         } ],
+         "date_added": "13431067253815971",
+         "date_last_used": "0",
+         "date_modified": "13425331727537589",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Favorites bar",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13431067253815971",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13431067253815971",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "workspaces_v2": {
+         "children": [ {
+            "children": [  ],
+            "date_added": "13418140949009025",
+            "date_last_used": "0",
+            "date_modified": "13418140949009025",
+            "guid": "822faf47-1b7d-4e27-a783-cc7507fb720c",
+            "id": "9",
+            "name": "Workspace 1",
+            "source": "unknown",
+            "type": "folder"
+         } ],
+         "date_added": "13431067253815971",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "75aa6670-344f-549d-b742-660f029506ab",
+         "id": "5",
+         "name": "Workspaces",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CjEKDgiIgQISCD+yR/mfAQAAEgAqGFpsaEpuNk5ULzVZdnplL2RRV3VheXc9PUgDoAYHEo4BCAUSiQEKHHdSQnJaTCs2UEE5YXZLZ2pOUDdKWERMY2Z2cz0SJDlhM2ViNmM2LWZhYmYtNTI0MC05ZjhkLTg4OWYwOWVhMjg3MxgAIAAoADD3j+OMqTM48JPjjKkzQPCT44ypM0ocbm14NjVzUUR2eEk4VGdFZXYrQStudHRvU240PVoAZQAAAADCPgJgABKOAQgDEokBChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EiRiNmFiZWM4YS03Mzc3LTViMTUtYmU5ZC1mNzQxM2JmNjY2ZTIYACAAKAAw+I/jjKkzOJWU44ypM0CVlOOMqTNKHHl6TkIwMWNuNTRBN2NSVTB1VCsvUGdtVHRVbz1aAGUAAAAAwj4CYAASrQEICBKoAQocZnBaK2tSNFZyQ2UwV2Vud3J2WExPRHAyQzNRPRIkMzE4MGY2M2QtZjhjNi00ODEwLThiZDMtZDYyZjFjYjhiNWE0GAAgACgAMO/AqpvqMziQyaqb6jNAkMmqm+ozShxTYmR6SnFJZnhtdlNpTXdtMFZHWFZ4ck1laDQ9Wh8iHasydzlod2YyUm1nazlWQWxFVk0rVDhyci9NS1U9ZQAAAADCPgJgBRKsAQgJEqcBChxnYUlZT1FBNUJ6cGh4KzVmdEkvSUlsU1lEZlE9EiQ4MjJmYWY0Ny0xYjdkLTRlMjctYTc4My1jYzc1MDdmYjcyMGMYACAAKAAw+/m/ts8zOL2xvrbPM0C9sb62zzNKHDZtOGI0MU5OWXF0U3g2QWYzM3g5ZGloWHlBaz1aHiIcbG5ZVXNvTXdXdlZNc0JLUkJlclNUS0NCUC9nPWUAAAAAwj4CYAASrAEIBxKnAQocNWZkNGVvLzljTldReFFWS2hDSThhTTM0UXl3PRIkZTg1M2E4N2MtMzk5My00MzMyLTgyNjktMmY1Yjg5NzhlY2M1GAAgACgAMPWAmejXMzivjJno1zNAr4yZ6NczShxVNVdmSHd0Ni91NGZkMEoycEduOHZMRjFBNk09Wh4iHFdDc0V2eEE5Y0JFTG9yd2txc29ZR1pQRGtXVT1l+F2Iw8I+AmAFEo4BCAESiQEKHHl4Si82ZnZrZWNyN2twNUVRekI0dFdMcGRiRT0SJGVkZGY3Y2E5LThlYWEtNTgzZi04ZmJlLTM3N2Q3OTI4YjA2OBgAIAAoADDxj+OMqTM4rZPjjKkzQK2T44ypM0ocYVJDV0xnaEY5YjVJbnFLSUR2dUovanZRa0ZjPVoAZQAAAADCPgJgABKOAQgCEokBChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EiQxNjA5YTMwZC0zMGExLTVmNjEtOWY3ZS1kYzU1Nzk3MDgzYmYYACAAKAAw8o/jjKkzOMKT44ypM0DCk+OMqTNKHG9QVmtod0JSYlY2NUtDV1IyK0lPTkhXb091OD1aAGUAAAAAwj4CYAAwADgA",
+   "version": 1
+}

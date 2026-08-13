@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "Emula i file CRX nel tuo browser"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "Consenti autorizzazioni"
+   },
+   "opt_cancel": {
+      "message": "Annulla"
+   },
+   "opt_confirm": {
+      "message": "Conferma"
+   },
+   "opt_downloaded": {
+      "message": "Scaricato con successo"
+   },
+   "opt_downloaded_subtext": {
+      "message": "L'estensione è stata scaricata con successo"
+   },
+   "opt_downloading": {
+      "message": "Download dell'estensione in corso..."
+   },
+   "opt_downloading_subtext": {
+      "message": "Download dell'estensione per l'installazione"
+   },
+   "opt_enable_extension_warning": {
+      "message": "richiede autorizzazioni per continuare il processo di installazione."
+   },
+   "opt_enable_installing": {
+      "message": "Installazione in corso..."
+   },
+   "opt_extension": {
+      "message": "Estensione"
+   },
+   "opt_extension_already_installed": {
+      "message": "Un'estensione è già installata."
+   },
+   "opt_extracted": {
+      "message": "Estensione estratta"
+   },
+   "opt_extracted_subtext": {
+      "message": "I file dell'estensione sono stati estratti con successo"
+   },
+   "opt_extracting": {
+      "message": "Estrazione dell'estensione in corso..."
+   },
+   "opt_extracting_subtext": {
+      "message": "Preparazione dei file per l'installazione"
+   },
+   "opt_formats": {
+      "message": "Formati consentiti"
+   },
+   "opt_get_started": {
+      "message": "Inizia"
+   },
+   "opt_grant_permissions": {
+      "message": "Concedi autorizzazioni"
+   },
+   "opt_installed": {
+      "message": "Autorizzazioni concesse"
+   },
+   "opt_installed_subtext": {
+      "message": "Estensione installata con successo"
+   },
+   "opt_installing": {
+      "message": "Installazione dell'estensione in corso..."
+   },
+   "opt_installing_subtext": {
+      "message": "Concedi le autorizzazioni necessarie per continuare"
+   },
+   "opt_invalid_file": {
+      "message": "Il file selezionato non è supportato."
+   },
+   "opt_no_options": {
+      "message": "non ha una pagina delle opzioni."
+   },
+   "opt_no_updates": {
+      "message": "Nessun aggiornamento disponibile per l'estensione."
+   },
+   "opt_permissions_required": {
+      "message": "L'installazione non può continuare senza le autorizzazioni necessarie."
+   },
+   "opt_remove": {
+      "message": "Rimuovi"
+   },
+   "opt_remove_confirm": {
+      "message": "Sei sicuro?"
+   },
+   "opt_subtext": {
+      "message": "Carica il tuo file qui sotto e ci occuperemo del resto! Assicurati che la tua estensione sia compatibile con le autorizzazioni e le API supportate per un'installazione senza problemi."
+   },
+   "opt_updated": {
+      "message": "L'estensione è stata aggiornata con successo."
+   },
+   "opt_updating": {
+      "message": "Aggiornamento dell'estensione all'ultima versione"
+   },
+   "opt_upload": {
+      "message": "Carica Estensione"
+   },
+   "opt_version": {
+      "message": "Versione"
+   }
+}

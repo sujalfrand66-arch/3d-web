@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "Эмулируйте файлы CRX в вашем браузере"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "Разрешить доступ"
+   },
+   "opt_cancel": {
+      "message": "Отмена"
+   },
+   "opt_confirm": {
+      "message": "Подтвердить"
+   },
+   "opt_downloaded": {
+      "message": "Загружено успешно"
+   },
+   "opt_downloaded_subtext": {
+      "message": "Расширение успешно загружено"
+   },
+   "opt_downloading": {
+      "message": "Загрузка расширения..."
+   },
+   "opt_downloading_subtext": {
+      "message": "Загрузка расширения для установки"
+   },
+   "opt_enable_extension_warning": {
+      "message": "требует разрешений для продолжения установки."
+   },
+   "opt_enable_installing": {
+      "message": "Установка..."
+   },
+   "opt_extension": {
+      "message": "Расширение"
+   },
+   "opt_extension_already_installed": {
+      "message": "Расширение уже установлено."
+   },
+   "opt_extracted": {
+      "message": "Расширение распаковано"
+   },
+   "opt_extracted_subtext": {
+      "message": "Файлы расширения успешно распакованы"
+   },
+   "opt_extracting": {
+      "message": "Распаковка расширения..."
+   },
+   "opt_extracting_subtext": {
+      "message": "Подготовка файлов для установки"
+   },
+   "opt_formats": {
+      "message": "Допустимые форматы"
+   },
+   "opt_get_started": {
+      "message": "Начать"
+   },
+   "opt_grant_permissions": {
+      "message": "Предоставить разрешения"
+   },
+   "opt_installed": {
+      "message": "Разрешения предоставлены"
+   },
+   "opt_installed_subtext": {
+      "message": "Расширение успешно установлено"
+   },
+   "opt_installing": {
+      "message": "Установка расширения..."
+   },
+   "opt_installing_subtext": {
+      "message": "Предоставьте необходимые разрешения для продолжения"
+   },
+   "opt_invalid_file": {
+      "message": "Выбранный файл не поддерживается."
+   },
+   "opt_no_options": {
+      "message": "не имеет страницы настроек."
+   },
+   "opt_no_updates": {
+      "message": "Обновления для расширения отсутствуют."
+   },
+   "opt_permissions_required": {
+      "message": "Установка не может быть продолжена без необходимых разрешений."
+   },
+   "opt_remove": {
+      "message": "Удалить"
+   },
+   "opt_remove_confirm": {
+      "message": "Вы уверены?"
+   },
+   "opt_subtext": {
+      "message": "Загрузите ваш файл ниже, и мы сделаем всё остальное! Убедитесь, что ваше расширение совместимо с поддерживаемыми разрешениями и API для беспроблемной установки."
+   },
+   "opt_updated": {
+      "message": "Расширение успешно обновлено."
+   },
+   "opt_updating": {
+      "message": "Обновление расширения до последней версии"
+   },
+   "opt_upload": {
+      "message": "Загрузить расширение"
+   },
+   "opt_version": {
+      "message": "Версия"
+   }
+}

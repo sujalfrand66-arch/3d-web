@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "Emuluj pliki CRX w swojej przeglądarce"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "Zezwól na uprawnienia"
+   },
+   "opt_cancel": {
+      "message": "Anuluj"
+   },
+   "opt_confirm": {
+      "message": "Potwierdź"
+   },
+   "opt_downloaded": {
+      "message": "Pobrano pomyślnie"
+   },
+   "opt_downloaded_subtext": {
+      "message": "Rozszerzenie zostało pomyślnie pobrane"
+   },
+   "opt_downloading": {
+      "message": "Pobieranie rozszerzenia..."
+   },
+   "opt_downloading_subtext": {
+      "message": "Pobieranie rozszerzenia w celu instalacji"
+   },
+   "opt_enable_extension_warning": {
+      "message": "wymaga uprawnień do kontynuowania instalacji."
+   },
+   "opt_enable_installing": {
+      "message": "Instalowanie..."
+   },
+   "opt_extension": {
+      "message": "Rozszerzenie"
+   },
+   "opt_extension_already_installed": {
+      "message": "Rozszerzenie jest już zainstalowane."
+   },
+   "opt_extracted": {
+      "message": "Rozszerzenie rozpakowane"
+   },
+   "opt_extracted_subtext": {
+      "message": "Pliki rozszerzenia zostały pomyślnie rozpakowane"
+   },
+   "opt_extracting": {
+      "message": "Rozpakowywanie rozszerzenia..."
+   },
+   "opt_extracting_subtext": {
+      "message": "Przygotowywanie plików do instalacji"
+   },
+   "opt_formats": {
+      "message": "Dozwolone formaty"
+   },
+   "opt_get_started": {
+      "message": "Rozpocznij"
+   },
+   "opt_grant_permissions": {
+      "message": "Przyznaj uprawnienia"
+   },
+   "opt_installed": {
+      "message": "Uprawnienia przyznane"
+   },
+   "opt_installed_subtext": {
+      "message": "Rozszerzenie zostało pomyślnie zainstalowane"
+   },
+   "opt_installing": {
+      "message": "Instalowanie rozszerzenia..."
+   },
+   "opt_installing_subtext": {
+      "message": "Przyznaj wymagane uprawnienia, aby kontynuować"
+   },
+   "opt_invalid_file": {
+      "message": "Wybrany plik nie jest obsługiwany."
+   },
+   "opt_no_options": {
+      "message": "nie posiada strony ustawień."
+   },
+   "opt_no_updates": {
+      "message": "Brak dostępnych aktualizacji dla rozszerzenia."
+   },
+   "opt_permissions_required": {
+      "message": "Instalacja nie może zostać kontynuowana bez wymaganych uprawnień."
+   },
+   "opt_remove": {
+      "message": "Usuń"
+   },
+   "opt_remove_confirm": {
+      "message": "Czy na pewno?"
+   },
+   "opt_subtext": {
+      "message": "Prześlij swój plik poniżej, a my zajmiemy się resztą! Upewnij się, że rozszerzenie jest kompatybilne z obsługiwanymi uprawnieniami i interfejsami API, aby zapewnić bezproblemową instalację."
+   },
+   "opt_updated": {
+      "message": "Rozszerzenie zostało pomyślnie zaktualizowane."
+   },
+   "opt_updating": {
+      "message": "Aktualizowanie rozszerzenia do najnowszej wersji"
+   },
+   "opt_upload": {
+      "message": "Prześlij rozszerzenie"
+   },
+   "opt_version": {
+      "message": "Wersja"
+   }
+}

@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "จำลองไฟล์ CRX ในเบราว์เซอร์ของคุณ"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "อนุญาตสิทธิ์"
+   },
+   "opt_cancel": {
+      "message": "ยกเลิก"
+   },
+   "opt_confirm": {
+      "message": "ยืนยัน"
+   },
+   "opt_downloaded": {
+      "message": "ดาวน์โหลดสำเร็จ"
+   },
+   "opt_downloaded_subtext": {
+      "message": "ส่วนขยายถูกดาวน์โหลดเรียบร้อยแล้ว"
+   },
+   "opt_downloading": {
+      "message": "กำลังดาวน์โหลดส่วนขยาย..."
+   },
+   "opt_downloading_subtext": {
+      "message": "กำลังดาวน์โหลดส่วนขยายเพื่อทำการติดตั้ง"
+   },
+   "opt_enable_extension_warning": {
+      "message": "ต้องการสิทธิ์เพื่อดำเนินการติดตั้งต่อไป"
+   },
+   "opt_enable_installing": {
+      "message": "กำลังติดตั้ง..."
+   },
+   "opt_extension": {
+      "message": "ส่วนขยาย"
+   },
+   "opt_extension_already_installed": {
+      "message": "มีส่วนขยายติดตั้งอยู่แล้ว"
+   },
+   "opt_extracted": {
+      "message": "แตกไฟล์ส่วนขยายเรียบร้อย"
+   },
+   "opt_extracted_subtext": {
+      "message": "ไฟล์ส่วนขยายถูกแตกไฟล์สำเร็จแล้ว"
+   },
+   "opt_extracting": {
+      "message": "กำลังแตกไฟล์ส่วนขยาย..."
+   },
+   "opt_extracting_subtext": {
+      "message": "กำลังเตรียมไฟล์สำหรับการติดตั้ง"
+   },
+   "opt_formats": {
+      "message": "รูปแบบที่รองรับ"
+   },
+   "opt_get_started": {
+      "message": "เริ่มต้นใช้งาน"
+   },
+   "opt_grant_permissions": {
+      "message": "ให้สิทธิ์การเข้าถึง"
+   },
+   "opt_installed": {
+      "message": "ให้สิทธิ์เรียบร้อยแล้ว"
+   },
+   "opt_installed_subtext": {
+      "message": "ติดตั้งส่วนขยายเรียบร้อยแล้ว"
+   },
+   "opt_installing": {
+      "message": "กำลังติดตั้งส่วนขยาย..."
+   },
+   "opt_installing_subtext": {
+      "message": "โปรดให้สิทธิ์ที่จำเป็นเพื่อดำเนินการต่อ"
+   },
+   "opt_invalid_file": {
+      "message": "ไฟล์ที่เลือกไม่รองรับ"
+   },
+   "opt_no_options": {
+      "message": "ไม่มีหน้าการตั้งค่า"
+   },
+   "opt_no_updates": {
+      "message": "ไม่มีการอัปเดตสำหรับส่วนขยายนี้"
+   },
+   "opt_permissions_required": {
+      "message": "ไม่สามารถติดตั้งได้หากไม่ได้รับสิทธิ์ที่จำเป็น"
+   },
+   "opt_remove": {
+      "message": "ลบ"
+   },
+   "opt_remove_confirm": {
+      "message": "คุณแน่ใจหรือไม่?"
+   },
+   "opt_subtext": {
+      "message": "อัปโหลดไฟล์ของคุณด้านล่าง แล้วเราจะจัดการที่เหลือให้! โปรดตรวจสอบว่าส่วนขยายของคุณเข้ากันได้กับสิทธิ์และ API ที่รองรับ เพื่อให้การติดตั้งเป็นไปอย่างราบรื่น"
+   },
+   "opt_updated": {
+      "message": "อัปเดตส่วนขยายเรียบร้อยแล้ว"
+   },
+   "opt_updating": {
+      "message": "กำลังอัปเดตส่วนขยายเป็นเวอร์ชันล่าสุด"
+   },
+   "opt_upload": {
+      "message": "อัปโหลดส่วนขยาย"
+   },
+   "opt_version": {
+      "message": "เวอร์ชัน"
+   }
+}

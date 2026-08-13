@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "CRX-Dateien in deinem Browser emulieren"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "Berechtigungen erlauben"
+   },
+   "opt_cancel": {
+      "message": "Abbrechen"
+   },
+   "opt_confirm": {
+      "message": "Bestätigen"
+   },
+   "opt_downloaded": {
+      "message": "Erfolgreich heruntergeladen"
+   },
+   "opt_downloaded_subtext": {
+      "message": "Die Erweiterung wurde erfolgreich heruntergeladen"
+   },
+   "opt_downloading": {
+      "message": "Erweiterung wird heruntergeladen..."
+   },
+   "opt_downloading_subtext": {
+      "message": "Erweiterung wird für die Installation heruntergeladen"
+   },
+   "opt_enable_extension_warning": {
+      "message": "erfordert Berechtigungen, um die Installation fortzusetzen."
+   },
+   "opt_enable_installing": {
+      "message": "Wird installiert..."
+   },
+   "opt_extension": {
+      "message": "Erweiterung"
+   },
+   "opt_extension_already_installed": {
+      "message": "Eine Erweiterung ist bereits installiert."
+   },
+   "opt_extracted": {
+      "message": "Erweiterung extrahiert"
+   },
+   "opt_extracted_subtext": {
+      "message": "Erweiterungsdateien wurden erfolgreich extrahiert"
+   },
+   "opt_extracting": {
+      "message": "Erweiterung wird extrahiert..."
+   },
+   "opt_extracting_subtext": {
+      "message": "Dateien für die Installation werden vorbereitet"
+   },
+   "opt_formats": {
+      "message": "Erlaubte Formate"
+   },
+   "opt_get_started": {
+      "message": "Los geht’s"
+   },
+   "opt_grant_permissions": {
+      "message": "Berechtigungen erteilen"
+   },
+   "opt_installed": {
+      "message": "Berechtigungen erteilt"
+   },
+   "opt_installed_subtext": {
+      "message": "Erweiterung erfolgreich installiert"
+   },
+   "opt_installing": {
+      "message": "Erweiterung wird installiert..."
+   },
+   "opt_installing_subtext": {
+      "message": "Bitte erteile die erforderlichen Berechtigungen, um fortzufahren"
+   },
+   "opt_invalid_file": {
+      "message": "Die ausgewählte Datei wird nicht unterstützt."
+   },
+   "opt_no_options": {
+      "message": "hat keine Einstellungsseite."
+   },
+   "opt_no_updates": {
+      "message": "Keine Updates für die Erweiterung verfügbar."
+   },
+   "opt_permissions_required": {
+      "message": "Die Installation kann ohne die erforderlichen Berechtigungen nicht fortgesetzt werden."
+   },
+   "opt_remove": {
+      "message": "Entfernen"
+   },
+   "opt_remove_confirm": {
+      "message": "Bist du sicher?"
+   },
+   "opt_subtext": {
+      "message": "Lade deine Datei unten hoch, und wir kümmern uns um den Rest! Stelle sicher, dass deine Erweiterung mit den unterstützten Berechtigungen und APIs kompatibel ist, um eine reibungslose Installation zu gewährleisten."
+   },
+   "opt_updated": {
+      "message": "Die Erweiterung wurde erfolgreich aktualisiert."
+   },
+   "opt_updating": {
+      "message": "Erweiterung wird auf die neueste Version aktualisiert"
+   },
+   "opt_upload": {
+      "message": "Erweiterung hochladen"
+   },
+   "opt_version": {
+      "message": "Version"
+   }
+}

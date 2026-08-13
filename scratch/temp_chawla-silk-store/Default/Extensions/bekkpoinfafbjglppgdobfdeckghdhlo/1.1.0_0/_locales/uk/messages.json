@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "Емулюйте файли CRX у вашому браузері"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "Дозволити доступ"
+   },
+   "opt_cancel": {
+      "message": "Скасувати"
+   },
+   "opt_confirm": {
+      "message": "Підтвердити"
+   },
+   "opt_downloaded": {
+      "message": "Успішно завантажено"
+   },
+   "opt_downloaded_subtext": {
+      "message": "Розширення успішно завантажено"
+   },
+   "opt_downloading": {
+      "message": "Завантаження розширення..."
+   },
+   "opt_downloading_subtext": {
+      "message": "Завантаження розширення для встановлення"
+   },
+   "opt_enable_extension_warning": {
+      "message": "потребує дозволів для продовження встановлення."
+   },
+   "opt_enable_installing": {
+      "message": "Встановлення..."
+   },
+   "opt_extension": {
+      "message": "Розширення"
+   },
+   "opt_extension_already_installed": {
+      "message": "Розширення вже встановлено."
+   },
+   "opt_extracted": {
+      "message": "Розширення розпаковано"
+   },
+   "opt_extracted_subtext": {
+      "message": "Файли розширення успішно розпаковано"
+   },
+   "opt_extracting": {
+      "message": "Розпакування розширення..."
+   },
+   "opt_extracting_subtext": {
+      "message": "Підготовка файлів для встановлення"
+   },
+   "opt_formats": {
+      "message": "Дозволені формати"
+   },
+   "opt_get_started": {
+      "message": "Почати"
+   },
+   "opt_grant_permissions": {
+      "message": "Надати дозволи"
+   },
+   "opt_installed": {
+      "message": "Дозволи надано"
+   },
+   "opt_installed_subtext": {
+      "message": "Розширення успішно встановлено"
+   },
+   "opt_installing": {
+      "message": "Встановлення розширення..."
+   },
+   "opt_installing_subtext": {
+      "message": "Надайте необхідні дозволи для продовження"
+   },
+   "opt_invalid_file": {
+      "message": "Вибраний файл не підтримується."
+   },
+   "opt_no_options": {
+      "message": "не має сторінки налаштувань."
+   },
+   "opt_no_updates": {
+      "message": "Оновлення для розширення відсутні."
+   },
+   "opt_permissions_required": {
+      "message": "Встановлення неможливе без необхідних дозволів."
+   },
+   "opt_remove": {
+      "message": "Видалити"
+   },
+   "opt_remove_confirm": {
+      "message": "Ви впевнені?"
+   },
+   "opt_subtext": {
+      "message": "Завантажте ваш файл нижче, і ми зробимо решту! Переконайтеся, що ваше розширення сумісне з підтримуваними дозволами та API для безперебійного встановлення."
+   },
+   "opt_updated": {
+      "message": "Розширення успішно оновлено."
+   },
+   "opt_updating": {
+      "message": "Оновлення розширення до останньої версії"
+   },
+   "opt_upload": {
+      "message": "Завантажити розширення"
+   },
+   "opt_version": {
+      "message": "Версія"
+   }
+}

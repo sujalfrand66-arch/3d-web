@@ -1,0 +1,5 @@
+2026/08/13-09:31:42.486 1ff0 Creating DB C:\Users\hh\coding\DR MISHRA\phase 2\scratch\temp_groshine-consultants\Default\EdgeCoupons/coupons_data.db since it was missing.
+2026/08/13-09:31:42.516 1ff0 Reusing MANIFEST C:\Users\hh\coding\DR MISHRA\phase 2\scratch\temp_groshine-consultants\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/08/13-09:31:43.585 34d0 Level-0 table #5: started
+2026/08/13-09:31:43.599 34d0 Level-0 table #5: 683284 bytes OK
+2026/08/13-09:31:43.603 34d0 Delete type=0 #3

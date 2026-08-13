@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "Emula archivos CRX en tu navegador"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "Permitir permisos"
+   },
+   "opt_cancel": {
+      "message": "Cancelar"
+   },
+   "opt_confirm": {
+      "message": "Confirmar"
+   },
+   "opt_downloaded": {
+      "message": "Descargado con éxito"
+   },
+   "opt_downloaded_subtext": {
+      "message": "La extensión se ha descargado correctamente"
+   },
+   "opt_downloading": {
+      "message": "Descargando la extensión..."
+   },
+   "opt_downloading_subtext": {
+      "message": "Descargando la extensión para su instalación"
+   },
+   "opt_enable_extension_warning": {
+      "message": "requiere permisos para continuar con la instalación."
+   },
+   "opt_enable_installing": {
+      "message": "Instalando..."
+   },
+   "opt_extension": {
+      "message": "Extensión"
+   },
+   "opt_extension_already_installed": {
+      "message": "Ya hay una extensión instalada."
+   },
+   "opt_extracted": {
+      "message": "Extensión extraída"
+   },
+   "opt_extracted_subtext": {
+      "message": "Los archivos de la extensión se han extraído correctamente"
+   },
+   "opt_extracting": {
+      "message": "Extrayendo la extensión..."
+   },
+   "opt_extracting_subtext": {
+      "message": "Preparando archivos para la instalación"
+   },
+   "opt_formats": {
+      "message": "Formatos permitidos"
+   },
+   "opt_get_started": {
+      "message": "Comenzar"
+   },
+   "opt_grant_permissions": {
+      "message": "Conceder permisos"
+   },
+   "opt_installed": {
+      "message": "Permisos concedidos"
+   },
+   "opt_installed_subtext": {
+      "message": "Extensión instalada correctamente"
+   },
+   "opt_installing": {
+      "message": "Instalando la extensión..."
+   },
+   "opt_installing_subtext": {
+      "message": "Concede los permisos necesarios para continuar"
+   },
+   "opt_invalid_file": {
+      "message": "El archivo seleccionado no es compatible."
+   },
+   "opt_no_options": {
+      "message": "no tiene una página de opciones."
+   },
+   "opt_no_updates": {
+      "message": "No hay actualizaciones disponibles para la extensión."
+   },
+   "opt_permissions_required": {
+      "message": "La instalación no puede continuar sin los permisos necesarios."
+   },
+   "opt_remove": {
+      "message": "Eliminar"
+   },
+   "opt_remove_confirm": {
+      "message": "¿Estás seguro?"
+   },
+   "opt_subtext": {
+      "message": "Sube tu archivo a continuación y nosotros nos encargaremos del resto. Asegúrate de que tu extensión sea compatible con los permisos y API admitidos para una instalación sin problemas."
+   },
+   "opt_updated": {
+      "message": "La extensión se ha actualizado correctamente."
+   },
+   "opt_updating": {
+      "message": "Actualizando la extensión a la última versión"
+   },
+   "opt_upload": {
+      "message": "Subir extensión"
+   },
+   "opt_version": {
+      "message": "Versión"
+   }
+}

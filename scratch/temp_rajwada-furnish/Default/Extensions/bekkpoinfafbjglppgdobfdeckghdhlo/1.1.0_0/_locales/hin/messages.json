@@ -1,0 +1,107 @@
+{
+    "name": {
+        "message": "CRX Emulator"
+    },
+    "description": {
+        "message": "अपने ब्राउज़र में CRX फ़ाइलों का अनुकरण करें"
+    },
+    "opt_get_started": {
+        "message": "शुरू करें"
+    },
+    "opt_extension": {
+        "message": "एक्सटेंशन"
+    },
+    "opt_subtext": {
+        "message": "अपनी फ़ाइल नीचे अपलोड करें, और बाकी का काम हम करेंगे! सुनिश्चित करें कि आपका एक्सटेंशन समर्थित अनुमतियों और API के साथ संगत है ताकि इंस्टॉलेशन बिना किसी परेशानी के हो।"
+    },
+    "opt_upload": {
+        "message": "एक्सटेंशन अपलोड करें"
+    },
+    "opt_formats": {
+        "message": "अनुमोदित प्रारूप"
+    },
+    "opt_version": {
+        "message": "संस्करण"
+    },
+    "opt_remove": {
+        "message": "हटाएं"
+    },
+    "opt_remove_confirm": {
+        "message": "क्या आप सुनिश्चित हैं?"
+    },
+    "opt_confirm": {
+        "message": "पुष्टि करें"
+    },
+    "opt_cancel": {
+        "message": "रद्द करें"
+    },
+    "opt_no_options": {
+        "message": "में कोई विकल्प पृष्ठ नहीं है।"
+    },
+    "opt_downloading": {
+        "message": "एक्सटेंशन डाउनलोड किया जा रहा है..."
+    },
+    "opt_downloading_subtext": {
+        "message": "इंस्टॉलेशन के लिए एक्सटेंशन डाउनलोड हो रहा है"
+    },
+    "opt_downloaded": {
+        "message": "सफलतापूर्वक डाउनलोड हो गया"
+    },
+    "opt_downloaded_subtext": {
+        "message": "एक्सटेंशन सफलतापूर्वक डाउनलोड हो गया"
+    },
+    "opt_extracting": {
+        "message": "एक्सटेंशन निकाला जा रहा है..."
+    },
+    "opt_extracting_subtext": {
+        "message": "इंस्टॉलेशन के लिए फ़ाइलें तैयार की जा रही हैं"
+    },
+    "opt_extracted": {
+        "message": "एक्सटेंशन निकाला गया"
+    },
+    "opt_extracted_subtext": {
+        "message": "एक्सटेंशन फ़ाइलें सफलतापूर्वक निकाली गईं"
+    },
+    "opt_installing": {
+        "message": "एक्सटेंशन इंस्टॉल किया जा रहा है..."
+    },
+    "opt_installing_subtext": {
+        "message": "कृपया जारी रखने के लिए आवश्यक अनुमतियाँ दें"
+    },
+    "opt_installed": {
+        "message": "अनुमतियाँ प्रदान की गईं"
+    },
+    "opt_installed_subtext": {
+        "message": "एक्सटेंशन सफलतापूर्वक इंस्टॉल हो गया"
+    },
+    "opt_allow_permissions": {
+        "message": "अनुमतियाँ दें"
+    },
+    "opt_enable_extension_warning": {
+        "message": "इंस्टॉलेशन प्रक्रिया जारी रखने के लिए अनुमतियाँ आवश्यक हैं।"
+    },
+    "opt_grant_permissions": {
+        "message": "अनुमतियाँ प्रदान करें"
+    },
+    "opt_enable_installing": {
+        "message": "इंस्टॉलेशन हो रहा है..."
+    },
+    "opt_invalid_file": {
+        "message": "चयनित फ़ाइल समर्थित नहीं है।"
+    },
+    "opt_extension_already_installed": {
+        "message": "एक एक्सटेंशन पहले से ही इंस्टॉल है।"
+    },
+    "opt_permissions_required": {
+        "message": "आवश्यक अनुमतियाँ न होने के कारण इंस्टॉलेशन जारी नहीं रखा जा सकता।"
+    },
+    "opt_no_updates": {
+        "message": "इस एक्सटेंशन के लिए कोई अपडेट उपलब्ध नहीं है।"
+    },
+    "opt_updating": {
+        "message": "एक्सटेंशन को नवीनतम संस्करण में अपडेट किया जा रहा है"
+    },
+    "opt_updated": {
+        "message": "एक्सटेंशन सफलतापूर्वक अपडेट हो गया।"
+    }
+}

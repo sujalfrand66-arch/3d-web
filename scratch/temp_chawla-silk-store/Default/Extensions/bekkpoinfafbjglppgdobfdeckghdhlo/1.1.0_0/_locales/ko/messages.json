@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "브라우저에서 CRX 파일을 에뮬레이트"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "권한 허용"
+   },
+   "opt_cancel": {
+      "message": "취소"
+   },
+   "opt_confirm": {
+      "message": "확인"
+   },
+   "opt_downloaded": {
+      "message": "다운로드 완료"
+   },
+   "opt_downloaded_subtext": {
+      "message": "확장 프로그램이 성공적으로 다운로드되었습니다."
+   },
+   "opt_downloading": {
+      "message": "확장 프로그램 다운로드 중..."
+   },
+   "opt_downloading_subtext": {
+      "message": "설치를 위해 확장 프로그램을 다운로드하는 중"
+   },
+   "opt_enable_extension_warning": {
+      "message": "설치를 계속하려면 권한이 필요합니다."
+   },
+   "opt_enable_installing": {
+      "message": "설치 중..."
+   },
+   "opt_extension": {
+      "message": "확장 프로그램"
+   },
+   "opt_extension_already_installed": {
+      "message": "이미 확장 프로그램이 설치되어 있습니다."
+   },
+   "opt_extracted": {
+      "message": "확장 프로그램 압축 해제 완료"
+   },
+   "opt_extracted_subtext": {
+      "message": "확장 프로그램 파일이 성공적으로 압축 해제되었습니다."
+   },
+   "opt_extracting": {
+      "message": "확장 프로그램 압축 해제 중..."
+   },
+   "opt_extracting_subtext": {
+      "message": "설치를 위한 파일을 준비하는 중"
+   },
+   "opt_formats": {
+      "message": "지원되는 형식"
+   },
+   "opt_get_started": {
+      "message": "시작하기"
+   },
+   "opt_grant_permissions": {
+      "message": "권한 부여"
+   },
+   "opt_installed": {
+      "message": "권한이 허용됨"
+   },
+   "opt_installed_subtext": {
+      "message": "확장 프로그램이 성공적으로 설치되었습니다."
+   },
+   "opt_installing": {
+      "message": "확장 프로그램 설치 중..."
+   },
+   "opt_installing_subtext": {
+      "message": "계속하려면 필요한 권한을 부여하세요."
+   },
+   "opt_invalid_file": {
+      "message": "선택한 파일은 지원되지 않습니다."
+   },
+   "opt_no_options": {
+      "message": "옵션 페이지가 없습니다."
+   },
+   "opt_no_updates": {
+      "message": "이 확장 프로그램에 대한 업데이트가 없습니다."
+   },
+   "opt_permissions_required": {
+      "message": "필요한 권한이 없으면 설치를 진행할 수 없습니다."
+   },
+   "opt_remove": {
+      "message": "삭제"
+   },
+   "opt_remove_confirm": {
+      "message": "정말 삭제하시겠습니까?"
+   },
+   "opt_subtext": {
+      "message": "파일을 아래에 업로드하면 나머지는 저희가 처리합니다! 원활한 설치를 위해 확장 프로그램이 지원되는 권한 및 API와 호환되는지 확인하세요."
+   },
+   "opt_updated": {
+      "message": "확장 프로그램이 성공적으로 업데이트되었습니다."
+   },
+   "opt_updating": {
+      "message": "확장 프로그램을 최신 버전으로 업데이트 중"
+   },
+   "opt_upload": {
+      "message": "확장 프로그램 업로드"
+   },
+   "opt_version": {
+      "message": "버전"
+   }
+}

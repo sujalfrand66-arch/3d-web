@@ -1,0 +1,107 @@
+{
+    "name": {
+        "message": "CRX Emulator"
+    },
+    "description": {
+        "message": "Emule arquivos CRX no seu navegador"
+    },
+    "opt_get_started": {
+        "message": "Começar"
+    },
+    "opt_extension": {
+        "message": "Extensão"
+    },
+    "opt_subtext": {
+        "message": "Envie seu arquivo abaixo e nós cuidamos do resto! Certifique-se de que sua extensão é compatível com as permissões e APIs suportadas para uma instalação sem problemas."
+    },
+    "opt_upload": {
+        "message": "Enviar Extensão"
+    },
+    "opt_formats": {
+        "message": "Formatos Permitidos"
+    },
+    "opt_version": {
+        "message": "Versão"
+    },
+    "opt_remove": {
+        "message": "Remover"
+    },
+    "opt_remove_confirm": {
+        "message": "Tem certeza?"
+    },
+    "opt_confirm": {
+        "message": "Confirmar"
+    },
+    "opt_cancel": {
+        "message": "Cancelar"
+    },
+    "opt_no_options": {
+        "message": "não possui uma página de opções."
+    },
+    "opt_downloading": {
+        "message": "Baixando extensão..."
+    },
+    "opt_downloading_subtext": {
+        "message": "Baixando a extensão para instalação"
+    },
+    "opt_downloaded": {
+        "message": "Download concluído com sucesso"
+    },
+    "opt_downloaded_subtext": {
+        "message": "A extensão foi baixada com sucesso"
+    },
+    "opt_extracting": {
+        "message": "Extraindo extensão..."
+    },
+    "opt_extracting_subtext": {
+        "message": "Preparando arquivos para a instalação"
+    },
+    "opt_extracted": {
+        "message": "Extensão extraída"
+    },
+    "opt_extracted_subtext": {
+        "message": "Os arquivos da extensão foram extraídos com sucesso"
+    },
+    "opt_installing": {
+        "message": "Instalando extensão..."
+    },
+    "opt_installing_subtext": {
+        "message": "Conceda as permissões necessárias para continuar"
+    },
+    "opt_installed": {
+        "message": "Permissões concedidas"
+    },
+    "opt_installed_subtext": {
+        "message": "Extensão instalada com sucesso"
+    },
+    "opt_allow_permissions": {
+        "message": "Permitir Permissões"
+    },
+    "opt_enable_extension_warning": {
+        "message": "requer permissões para continuar o processo de instalação."
+    },
+    "opt_grant_permissions": {
+        "message": "Conceder Permissões"
+    },
+    "opt_enable_installing": {
+        "message": "Instalando..."
+    },
+    "opt_invalid_file": {
+        "message": "O arquivo selecionado não é compatível."
+    },
+    "opt_extension_already_installed": {
+        "message": "Uma extensão já está instalada."
+    },
+    "opt_permissions_required": {
+        "message": "A instalação não pode continuar sem as permissões necessárias."
+    },
+    "opt_no_updates": {
+        "message": "Nenhuma atualização disponível para a extensão."
+    },
+    "opt_updating": {
+        "message": "Atualizando a extensão para a versão mais recente"
+    },
+    "opt_updated": {
+        "message": "A extensão foi atualizada com sucesso."
+    }
+}

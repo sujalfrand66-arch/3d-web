@@ -1,0 +1,1 @@
+(()=>{"use strict";try{const e=localStorage.getItem("__crxemulator_theme__")??"system";("dark"===e||"light"!==e&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&document.documentElement.classList.add("dark")}catch{}})();

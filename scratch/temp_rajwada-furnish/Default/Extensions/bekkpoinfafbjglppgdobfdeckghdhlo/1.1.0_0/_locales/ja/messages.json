@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "ブラウザでCRXファイルをエミュレート"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "権限を許可"
+   },
+   "opt_cancel": {
+      "message": "キャンセル"
+   },
+   "opt_confirm": {
+      "message": "確認"
+   },
+   "opt_downloaded": {
+      "message": "ダウンロード完了"
+   },
+   "opt_downloaded_subtext": {
+      "message": "拡張機能のダウンロードが完了しました"
+   },
+   "opt_downloading": {
+      "message": "拡張機能をダウンロード中..."
+   },
+   "opt_downloading_subtext": {
+      "message": "インストール用に拡張機能をダウンロードしています"
+   },
+   "opt_enable_extension_warning": {
+      "message": "インストールを続行するには権限が必要です。"
+   },
+   "opt_enable_installing": {
+      "message": "インストール中..."
+   },
+   "opt_extension": {
+      "message": "拡張機能"
+   },
+   "opt_extension_already_installed": {
+      "message": "すでに拡張機能がインストールされています。"
+   },
+   "opt_extracted": {
+      "message": "拡張機能を展開しました"
+   },
+   "opt_extracted_subtext": {
+      "message": "拡張機能のファイルが正常に展開されました"
+   },
+   "opt_extracting": {
+      "message": "拡張機能を展開中..."
+   },
+   "opt_extracting_subtext": {
+      "message": "インストールのためにファイルを準備しています"
+   },
+   "opt_formats": {
+      "message": "対応フォーマット"
+   },
+   "opt_get_started": {
+      "message": "始めましょう"
+   },
+   "opt_grant_permissions": {
+      "message": "権限を付与"
+   },
+   "opt_installed": {
+      "message": "権限が許可されました"
+   },
+   "opt_installed_subtext": {
+      "message": "拡張機能が正常にインストールされました"
+   },
+   "opt_installing": {
+      "message": "拡張機能をインストール中..."
+   },
+   "opt_installing_subtext": {
+      "message": "続行するには必要な権限を付与してください"
+   },
+   "opt_invalid_file": {
+      "message": "選択したファイルはサポートされていません。"
+   },
+   "opt_no_options": {
+      "message": "オプションページはありません。"
+   },
+   "opt_no_updates": {
+      "message": "拡張機能のアップデートはありません。"
+   },
+   "opt_permissions_required": {
+      "message": "必要な権限がないため、インストールを続行できません。"
+   },
+   "opt_remove": {
+      "message": "削除"
+   },
+   "opt_remove_confirm": {
+      "message": "本当に削除しますか？"
+   },
+   "opt_subtext": {
+      "message": "ファイルをアップロードすると、あとはお任せください！対応する権限とAPIを確認し、スムーズにインストールできるようにしてください。"
+   },
+   "opt_updated": {
+      "message": "拡張機能が正常に更新されました。"
+   },
+   "opt_updating": {
+      "message": "拡張機能を最新バージョンに更新中"
+   },
+   "opt_upload": {
+      "message": "拡張機能をアップロード"
+   },
+   "opt_version": {
+      "message": "バージョン"
+   }
+}

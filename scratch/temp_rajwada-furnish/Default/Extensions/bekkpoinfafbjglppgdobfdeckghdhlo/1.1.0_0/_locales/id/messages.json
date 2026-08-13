@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "Mensimulasikan file CRX di browser Anda"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "Izinkan Izin"
+   },
+   "opt_cancel": {
+      "message": "Batal"
+   },
+   "opt_confirm": {
+      "message": "Konfirmasi"
+   },
+   "opt_downloaded": {
+      "message": "Berhasil diunduh"
+   },
+   "opt_downloaded_subtext": {
+      "message": "Ekstensi telah berhasil diunduh"
+   },
+   "opt_downloading": {
+      "message": "Mengunduh ekstensi..."
+   },
+   "opt_downloading_subtext": {
+      "message": "Mengunduh ekstensi untuk instalasi"
+   },
+   "opt_enable_extension_warning": {
+      "message": "memerlukan izin untuk melanjutkan proses instalasi."
+   },
+   "opt_enable_installing": {
+      "message": "Menginstal..."
+   },
+   "opt_extension": {
+      "message": "Ekstensi"
+   },
+   "opt_extension_already_installed": {
+      "message": "Ekstensi sudah terinstal."
+   },
+   "opt_extracted": {
+      "message": "Ekstensi telah diekstrak"
+   },
+   "opt_extracted_subtext": {
+      "message": "File ekstensi berhasil diekstrak"
+   },
+   "opt_extracting": {
+      "message": "Mengekstrak ekstensi..."
+   },
+   "opt_extracting_subtext": {
+      "message": "Menyiapkan file untuk instalasi"
+   },
+   "opt_formats": {
+      "message": "Format yang Diizinkan"
+   },
+   "opt_get_started": {
+      "message": "Mulai"
+   },
+   "opt_grant_permissions": {
+      "message": "Berikan Izin"
+   },
+   "opt_installed": {
+      "message": "Izin diberikan"
+   },
+   "opt_installed_subtext": {
+      "message": "Ekstensi berhasil diinstal"
+   },
+   "opt_installing": {
+      "message": "Menginstal ekstensi..."
+   },
+   "opt_installing_subtext": {
+      "message": "Harap berikan izin yang diperlukan untuk melanjutkan"
+   },
+   "opt_invalid_file": {
+      "message": "File yang dipilih tidak didukung."
+   },
+   "opt_no_options": {
+      "message": "tidak memiliki halaman opsi."
+   },
+   "opt_no_updates": {
+      "message": "Tidak ada pembaruan yang tersedia untuk ekstensi ini."
+   },
+   "opt_permissions_required": {
+      "message": "Instalasi tidak dapat dilanjutkan tanpa izin yang diperlukan."
+   },
+   "opt_remove": {
+      "message": "Hapus"
+   },
+   "opt_remove_confirm": {
+      "message": "Apakah Anda yakin?"
+   },
+   "opt_subtext": {
+      "message": "Unggah file Anda di bawah ini, dan kami akan mengurus sisanya! Pastikan ekstensi Anda kompatibel dengan izin dan API yang didukung untuk instalasi yang lancar."
+   },
+   "opt_updated": {
+      "message": "Ekstensi telah berhasil diperbarui."
+   },
+   "opt_updating": {
+      "message": "Memperbarui ekstensi ke versi terbaru"
+   },
+   "opt_upload": {
+      "message": "Unggah Ekstensi"
+   },
+   "opt_version": {
+      "message": "Versi"
+   }
+}

@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "Emulate CRX files in your browser"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "Allow Permissions"
+   },
+   "opt_cancel": {
+      "message": "Cancel"
+   },
+   "opt_confirm": {
+      "message": "Confirm"
+   },
+   "opt_downloaded": {
+      "message": "Downloaded successfully"
+   },
+   "opt_downloaded_subtext": {
+      "message": "Extension has been downloaded successfully"
+   },
+   "opt_downloading": {
+      "message": "Downloading extension..."
+   },
+   "opt_downloading_subtext": {
+      "message": "Downloading the extension for installation"
+   },
+   "opt_enable_extension_warning": {
+      "message": "requires permissions to continue installation process."
+   },
+   "opt_enable_installing": {
+      "message": "Installing..."
+   },
+   "opt_extension": {
+      "message": "Extension"
+   },
+   "opt_extension_already_installed": {
+      "message": "An extension is already installed."
+   },
+   "opt_extracted": {
+      "message": "Extension extracted"
+   },
+   "opt_extracted_subtext": {
+      "message": "Extension files extracted successfully"
+   },
+   "opt_extracting": {
+      "message": "Extracting extension..."
+   },
+   "opt_extracting_subtext": {
+      "message": "Preparing files for installation"
+   },
+   "opt_formats": {
+      "message": "Allowed Formats"
+   },
+   "opt_get_started": {
+      "message": "Get Started with Your"
+   },
+   "opt_grant_permissions": {
+      "message": "Grant Permissions"
+   },
+   "opt_installed": {
+      "message": "Permissions granted"
+   },
+   "opt_installed_subtext": {
+      "message": "Extension installed successfully"
+   },
+   "opt_installing": {
+      "message": "Installing extension..."
+   },
+   "opt_installing_subtext": {
+      "message": "Grant the necessary permissions to continue"
+   },
+   "opt_invalid_file": {
+      "message": "Selected file is not supported."
+   },
+   "opt_no_options": {
+      "message": "does not have an options page."
+   },
+   "opt_no_updates": {
+      "message": "No updates available for the extension."
+   },
+   "opt_permissions_required": {
+      "message": "Installation cannot proceed without the permissions."
+   },
+   "opt_remove": {
+      "message": "Remove"
+   },
+   "opt_remove_confirm": {
+      "message": "Are you sure?"
+   },
+   "opt_subtext": {
+      "message": "Upload your file below, and we'll handle the rest! Ensure your extension is compatible with the supported permissions and APIs for seamless installation."
+   },
+   "opt_updated": {
+      "message": "Extension has been updated successfully."
+   },
+   "opt_updating": {
+      "message": "Updating extension to latest version"
+   },
+   "opt_upload": {
+      "message": "Upload Extension"
+   },
+   "opt_version": {
+      "message": "Version"
+   }
+}

@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "Tarayıcınızda CRX dosyalarını taklit edin"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "İzin Ver"
+   },
+   "opt_cancel": {
+      "message": "İptal"
+   },
+   "opt_confirm": {
+      "message": "Onayla"
+   },
+   "opt_downloaded": {
+      "message": "Başarıyla indirildi"
+   },
+   "opt_downloaded_subtext": {
+      "message": "Eklenti başarıyla indirildi"
+   },
+   "opt_downloading": {
+      "message": "Eklenti indiriliyor..."
+   },
+   "opt_downloading_subtext": {
+      "message": "Kurulum için eklenti indiriliyor"
+   },
+   "opt_enable_extension_warning": {
+      "message": "kurulumu tamamlamak için izin gerektiriyor."
+   },
+   "opt_enable_installing": {
+      "message": "Kuruluyor..."
+   },
+   "opt_extension": {
+      "message": "Eklenti"
+   },
+   "opt_extension_already_installed": {
+      "message": "Zaten bir eklenti yüklü."
+   },
+   "opt_extracted": {
+      "message": "Eklenti çıkarıldı"
+   },
+   "opt_extracted_subtext": {
+      "message": "Eklenti dosyaları başarıyla çıkarıldı"
+   },
+   "opt_extracting": {
+      "message": "Eklenti çıkarılıyor..."
+   },
+   "opt_extracting_subtext": {
+      "message": "Kurulum için dosyalar hazırlanıyor"
+   },
+   "opt_formats": {
+      "message": "Desteklenen Formatlar"
+   },
+   "opt_get_started": {
+      "message": "Başlayın"
+   },
+   "opt_grant_permissions": {
+      "message": "İzinleri Ver"
+   },
+   "opt_installed": {
+      "message": "İzinler verildi"
+   },
+   "opt_installed_subtext": {
+      "message": "Eklenti başarıyla yüklendi"
+   },
+   "opt_installing": {
+      "message": "Eklenti yükleniyor..."
+   },
+   "opt_installing_subtext": {
+      "message": "Devam etmek için gerekli izinleri verin"
+   },
+   "opt_invalid_file": {
+      "message": "Seçilen dosya desteklenmiyor."
+   },
+   "opt_no_options": {
+      "message": "ayarlar sayfasına sahip değil."
+   },
+   "opt_no_updates": {
+      "message": "Eklenti için herhangi bir güncelleme bulunmamaktadır."
+   },
+   "opt_permissions_required": {
+      "message": "Gerekli izinler olmadan kurulum devam edemez."
+   },
+   "opt_remove": {
+      "message": "Kaldır"
+   },
+   "opt_remove_confirm": {
+      "message": "Emin misiniz?"
+   },
+   "opt_subtext": {
+      "message": "Dosyanızı aşağıya yükleyin, gerisini biz halledelim! Sorunsuz bir kurulum için eklentinizin desteklenen izinler ve API’lerle uyumlu olduğundan emin olun."
+   },
+   "opt_updated": {
+      "message": "Eklenti başarıyla güncellendi."
+   },
+   "opt_updating": {
+      "message": "Eklenti en son sürüme güncelleniyor"
+   },
+   "opt_upload": {
+      "message": "Eklenti Yükle"
+   },
+   "opt_version": {
+      "message": "Sürüm"
+   }
+}

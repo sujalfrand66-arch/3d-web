@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "محاكاة ملفات CRX في متصفحك"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "السماح بالأذونات"
+   },
+   "opt_cancel": {
+      "message": "إلغاء"
+   },
+   "opt_confirm": {
+      "message": "تأكيد"
+   },
+   "opt_downloaded": {
+      "message": "تم التنزيل بنجاح"
+   },
+   "opt_downloaded_subtext": {
+      "message": "تم تنزيل الإضافة بنجاح"
+   },
+   "opt_downloading": {
+      "message": "جارٍ تنزيل الإضافة..."
+   },
+   "opt_downloading_subtext": {
+      "message": "جارٍ تنزيل الإضافة لتثبيتها"
+   },
+   "opt_enable_extension_warning": {
+      "message": "يتطلب أذونات لمتابعة عملية التثبيت."
+   },
+   "opt_enable_installing": {
+      "message": "جارٍ التثبيت..."
+   },
+   "opt_extension": {
+      "message": "الإضافة"
+   },
+   "opt_extension_already_installed": {
+      "message": "الإضافة مثبتة بالفعل."
+   },
+   "opt_extracted": {
+      "message": "تم استخراج الإضافة"
+   },
+   "opt_extracted_subtext": {
+      "message": "تم استخراج ملفات الإضافة بنجاح"
+   },
+   "opt_extracting": {
+      "message": "جارٍ استخراج الإضافة..."
+   },
+   "opt_extracting_subtext": {
+      "message": "جارٍ تجهيز الملفات للتثبيت"
+   },
+   "opt_formats": {
+      "message": "الصيغ المسموح بها"
+   },
+   "opt_get_started": {
+      "message": "ابدأ الآن"
+   },
+   "opt_grant_permissions": {
+      "message": "منح الأذونات"
+   },
+   "opt_installed": {
+      "message": "تم منح الأذونات"
+   },
+   "opt_installed_subtext": {
+      "message": "تم تثبيت الإضافة بنجاح"
+   },
+   "opt_installing": {
+      "message": "جارٍ تثبيت الإضافة..."
+   },
+   "opt_installing_subtext": {
+      "message": "يرجى منح الأذونات اللازمة للمتابعة"
+   },
+   "opt_invalid_file": {
+      "message": "الملف المحدد غير مدعوم."
+   },
+   "opt_no_options": {
+      "message": "لا تحتوي على صفحة إعدادات."
+   },
+   "opt_no_updates": {
+      "message": "لا توجد تحديثات متاحة للإضافة."
+   },
+   "opt_permissions_required": {
+      "message": "لا يمكن متابعة التثبيت بدون الأذونات المطلوبة."
+   },
+   "opt_remove": {
+      "message": "إزالة"
+   },
+   "opt_remove_confirm": {
+      "message": "هل أنت متأكد؟"
+   },
+   "opt_subtext": {
+      "message": "قم برفع ملفك أدناه، وسنتولى الباقي! تأكد من أن الإضافة متوافقة مع الأذونات وواجهات برمجة التطبيقات المدعومة لضمان التثبيت بسلاسة."
+   },
+   "opt_updated": {
+      "message": "تم تحديث الإضافة بنجاح."
+   },
+   "opt_updating": {
+      "message": "جارٍ تحديث الإضافة إلى أحدث إصدار"
+   },
+   "opt_upload": {
+      "message": "رفع الإضافة"
+   },
+   "opt_version": {
+      "message": "الإصدار"
+   }
+}

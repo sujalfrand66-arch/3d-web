@@ -1,0 +1,42 @@
+{
+   "action": {
+      "default_icon": "assets/icons/48.png",
+      "default_popup": "popup.html"
+   },
+   "author": "CRX Emulator",
+   "background": {
+      "service_worker": "assets/js/bg.js"
+   },
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "externally_connectable": {
+      "matches": [ "https://crxemulator.com/*" ]
+   },
+   "homepage_url": "https://crxemulator.com/",
+   "host_permissions": [ "*://crxemulator.com/*" ],
+   "icons": {
+      "128": "assets/icons/128.png",
+      "16": "assets/icons/16.png",
+      "48": "assets/icons/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1dLx2s1cEjxixL8Vx3xIgaXYT724GEKl3HKBD01GF7NkB2alAm1z8/8r2gdVvNsq6D6OlHXA/uZ8iTmZW231RnZqekOaPKa2WORjex4XIwG/wXjsBtEkXwNQoY+MO54wz+hBzwmsi4WmpG5WE/MbSMTXTKfeWMhdbD2tBn3qNGE+Qt2809k5DJXuHxkjAZC5OtQIRmFjikrI6CRRjiLfEoaGufCVzuYY381uYqUKJzVWuLDEdLMFa+vO6xhPS26gkilb/Ei/GFsQdCN/6PIc617XgGmNwqAF4Kkr1KD0TdW233PXdMm9aUHTABkA/73qLsTtz0aPusdP4lHl46RANQIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "120",
+   "name": "__MSG_name__",
+   "optional_host_permissions": [ "http://*/*", "https://*/*" ],
+   "optional_permissions": [ "tabs", "downloads", "downloads.open", "webRequest" ],
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "opt.html"
+   },
+   "permissions": [ "alarms", "storage", "unlimitedStorage", "offscreen", "scripting", "sidePanel", "declarativeNetRequestWithHostAccess" ],
+   "sandbox": {
+      "pages": [ "sb.html" ]
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.0",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "opt.html", "sb.html" ]
+   } ]
+}

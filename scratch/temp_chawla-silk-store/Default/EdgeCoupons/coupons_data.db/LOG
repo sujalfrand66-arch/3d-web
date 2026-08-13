@@ -1,0 +1,5 @@
+2026/08/13-09:30:57.048 57ec Creating DB C:\Users\hh\coding\DR MISHRA\phase 2\scratch\temp_chawla-silk-store\Default\EdgeCoupons/coupons_data.db since it was missing.
+2026/08/13-09:30:57.089 57ec Reusing MANIFEST C:\Users\hh\coding\DR MISHRA\phase 2\scratch\temp_chawla-silk-store\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/08/13-09:31:10.941 2bd4 Level-0 table #5: started
+2026/08/13-09:31:10.956 2bd4 Level-0 table #5: 683284 bytes OK
+2026/08/13-09:31:10.960 2bd4 Delete type=0 #3

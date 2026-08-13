@@ -1,0 +1,107 @@
+{
+   "description": {
+      "message": "在您的浏览器中模拟 CRX 文件"
+   },
+   "name": {
+      "message": "CRX Emulator"
+   },
+   "opt_allow_permissions": {
+      "message": "允许权限"
+   },
+   "opt_cancel": {
+      "message": "取消"
+   },
+   "opt_confirm": {
+      "message": "确认"
+   },
+   "opt_downloaded": {
+      "message": "下载成功"
+   },
+   "opt_downloaded_subtext": {
+      "message": "扩展程序已成功下载"
+   },
+   "opt_downloading": {
+      "message": "正在下载扩展程序..."
+   },
+   "opt_downloading_subtext": {
+      "message": "正在下载扩展程序以进行安装"
+   },
+   "opt_enable_extension_warning": {
+      "message": "需要权限才能继续安装过程。"
+   },
+   "opt_enable_installing": {
+      "message": "正在安装..."
+   },
+   "opt_extension": {
+      "message": "扩展程序"
+   },
+   "opt_extension_already_installed": {
+      "message": "扩展程序已安装。"
+   },
+   "opt_extracted": {
+      "message": "扩展程序已解压"
+   },
+   "opt_extracted_subtext": {
+      "message": "扩展程序文件已成功解压"
+   },
+   "opt_extracting": {
+      "message": "正在解压扩展程序..."
+   },
+   "opt_extracting_subtext": {
+      "message": "正在准备安装文件"
+   },
+   "opt_formats": {
+      "message": "支持的格式"
+   },
+   "opt_get_started": {
+      "message": "开始使用"
+   },
+   "opt_grant_permissions": {
+      "message": "授予权限"
+   },
+   "opt_installed": {
+      "message": "权限已授予"
+   },
+   "opt_installed_subtext": {
+      "message": "扩展程序安装成功"
+   },
+   "opt_installing": {
+      "message": "正在安装扩展程序..."
+   },
+   "opt_installing_subtext": {
+      "message": "请授予必要权限以继续"
+   },
+   "opt_invalid_file": {
+      "message": "所选文件不受支持。"
+   },
+   "opt_no_options": {
+      "message": "没有设置页面。"
+   },
+   "opt_no_updates": {
+      "message": "没有可用的扩展程序更新。"
+   },
+   "opt_permissions_required": {
+      "message": "安装无法继续，缺少必要的权限。"
+   },
+   "opt_remove": {
+      "message": "删除"
+   },
+   "opt_remove_confirm": {
+      "message": "您确定吗？"
+   },
+   "opt_subtext": {
+      "message": "在下方上传您的文件，我们将处理其余部分！请确保您的扩展程序与支持的权限和 API 兼容，以实现无缝安装。"
+   },
+   "opt_updated": {
+      "message": "扩展程序已成功更新。"
+   },
+   "opt_updating": {
+      "message": "正在更新扩展程序至最新版本"
+   },
+   "opt_upload": {
+      "message": "上传扩展程序"
+   },
+   "opt_version": {
+      "message": "版本"
+   }
+}
