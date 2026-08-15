@@ -407,7 +407,7 @@ export function ProjectsSection() {
               <div className="relative w-full aspect-[16/9] overflow-hidden rounded-[2px] bg-[#161616]">
                 <img
                   src={proj.image}
-                  alt={proj.title}
+                  alt={`${proj.title} — ${proj.category.toLowerCase()} website designed and developed by XWEBSITEWALA`}
                   className="card-img w-full h-[125%] -mt-[12.5%] object-cover object-center block"
                   loading="lazy"
                   decoding="async"

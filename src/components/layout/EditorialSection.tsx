@@ -1,7 +1,7 @@
 /**
  * EditorialSection.tsx
  *
- * Rebuilt from scratch using real business content from Lusux Web / RSTEX Solution
+ * Rebuilt from scratch using real business content from XWEBSITEWALA
  * (Founders: Sujal Frand & Anmol Frand | 9+ Years | 150+ Projects | Suratgarh, Rajasthan).
  *
  * Cinematic Chapters:
@@ -406,7 +406,7 @@ export function EditorialSection() {
           >
             <img
               src="/assets/cube2.png"
-              alt="Lusux Web Project Showcase"
+              alt="XWEBSITEWALA Web Design and Development Showcase"
               className="w-full h-full object-cover object-center"
               draggable={false}
             />
@@ -420,7 +420,7 @@ export function EditorialSection() {
         >
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span style={{ ...LABEL_STYLE, color: TEXT_MUTED }}>
-            LUSUX WEB DEVELOPER &nbsp;·&nbsp; EST. 2016
+            XWEBSITEWALA &nbsp;·&nbsp; EST. 2016
           </span>
         </div>
 
@@ -534,7 +534,7 @@ export function EditorialSection() {
                 </div>
               </div>
               <p className="mt-4 text-[10px] tracking-[0.3em] uppercase opacity-40">
-                LUSUX DIGITAL ARCHITECTURE — SURATGARH, INDIA
+                XWEBSITEWALA DIGITAL ARCHITECTURE — SURATGARH, INDIA
               </p>
             </div>
 
@@ -890,7 +890,7 @@ export function EditorialSection() {
 
           {/* Footer Bar */}
           <div className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-[10px] font-mono text-white/40 gap-4">
-            <div>&copy; 2025 Lusux Web Developer (RSTEX Solution). All rights reserved.</div>
+            <div>&copy; {new Date().getFullYear()} XWEBSITEWALA. All rights reserved.</div>
             <div>Crafted with precision in Suratgarh, Rajasthan</div>
           </div>
         </div>

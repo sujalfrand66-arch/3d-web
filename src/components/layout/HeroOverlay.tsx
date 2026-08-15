@@ -338,7 +338,7 @@ export function HeroOverlay() {
         <div className="lg:col-span-7 flex flex-col justify-center select-none z-20 pr-0 lg:pr-6 pb-8 lg:pb-12">
           
           {/* Main Title: WEB DESIGNER + Red Asterisk */}
-          <div className="relative mb-6">
+          <h1 className="relative mb-6">
             <div className="overflow-hidden">
               <div
                 ref={titleLine1Ref}
@@ -389,7 +389,7 @@ export function HeroOverlay() {
                 DESIGNER
               </div>
             </div>
-          </div>
+          </h1>
 
           {/* Subheading Statement (Masked line reveals) */}
           <div className="mb-4 overflow-hidden">
@@ -462,7 +462,7 @@ export function HeroOverlay() {
             <img
               ref={suziRef}
               src="/mp4/suzi.png"
-              alt="Suzi - Creative Web Designer"
+              alt="Sujal Frand - Web Designer and Web Developer at XWEBSITEWALA Suratgarh, Rajasthan"
               className="suzi-character object-contain max-h-[94%] lg:max-h-[99%] max-w-[95%] lg:max-w-full drop-shadow-2xl -translate-x-[15%] sm:-translate-x-[25%] lg:-translate-x-[38%]"
               style={{
                 objectFit: "contain",

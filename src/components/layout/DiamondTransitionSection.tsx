@@ -149,11 +149,11 @@ export function DiamondTransitionSection() {
       {/* Outer Dark Layer — Visible AROUND the expanding center diamond */}
       <div className="absolute inset-0 w-full h-full flex flex-col justify-between items-center px-6 md:px-12 py-8 pointer-events-none select-none">
         <div className="w-full flex justify-between text-[9px] font-sans tracking-[0.25em] uppercase text-white/25">
-          <span>LUSUX WEB / SURATGARH</span>
+          <span>XWEBSITEWALA / SURATGARH</span>
           <span>CAPABILITIES // 02</span>
         </div>
         <div className="text-[10vw] font-display font-black text-white/5 uppercase leading-none tracking-tighter">
-          LUSUX WEB
+          XWEBSITEWALA
         </div>
         <div className="w-full flex justify-between text-[9px] font-sans tracking-[0.25em] uppercase text-white/25">
           <span>RAJASTHAN, INDIA</span>
@@ -170,7 +170,7 @@ export function DiamondTransitionSection() {
         {/* Header */}
         <div className="w-full max-w-[1700px] mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-5 border-b border-black/10 z-30 shrink-0">
           <div className="diamond-eyebrow font-sans text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase text-black/70">
-            LUSUX WEB / SURATGARH, RAJASTHAN
+            XWEBSITEWALA / SURATGARH, RAJASTHAN
           </div>
           <div className="diamond-meta flex items-center gap-5 text-[9px] sm:text-[10px] font-sans tracking-[0.25em] uppercase text-black/45">
             <span>02 / SERVICES</span>
@@ -230,7 +230,7 @@ export function DiamondTransitionSection() {
             >
               <img
                 src="/assets/showcase-screen-horizontal.png"
-                alt="Lusux Web — Portfolio Showcase"
+                alt="XWEBSITEWALA Web Design and Development Showcase"
                 className="w-full h-[125%] -mt-[12.5%] object-cover object-center block"
                 style={{ willChange: "transform" }}
               />
@@ -284,7 +284,7 @@ export function DiamondTransitionSection() {
 
         {/* Footer Bar */}
         <div className="w-full max-w-[1700px] mx-auto flex justify-between items-center text-[9px] font-sans tracking-[0.25em] uppercase text-black/35 pt-4 mt-auto border-t border-black/10 z-30 shrink-0">
-          <span>LUSUX WEB DEVELOPER — SUJAL &amp; ANMOL FRAND</span>
+          <span>XWEBSITEWALA — SUJAL &amp; ANMOL FRAND</span>
           <span>SURATGARH, RAJASTHAN, INDIA — 2016 – 2026</span>
         </div>
       </div>

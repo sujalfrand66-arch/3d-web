@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -137,7 +137,7 @@ export function ServicesSection() {
         {activeIdx !== null && (
           <img
             src={SERVICES[activeIdx].img}
-            alt="Service Preview"
+            alt={`${SERVICES[activeIdx].name} — ${SERVICES[activeIdx].category} by XWEBSITEWALA`}
             className="w-full h-full object-cover object-center"
           />
         )}
