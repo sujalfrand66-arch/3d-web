@@ -148,12 +148,12 @@ export function FooterSection() {
           className="relative w-full overflow-hidden my-12 sm:my-16 lg:my-24 py-4 flex items-center justify-center pointer-events-none select-none"
           style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" }}
         >
-          <h1
+          <h2
             ref={giantTextInnerRef}
             className="font-display font-black text-[14.5vw] sm:text-[16.5vw] lg:text-[18.5vw] leading-[0.8] tracking-tighter uppercase text-white text-center whitespace-nowrap block"
           >
             XWEBSITEWALA
-          </h1>
+          </h2>
         </div>
 
         {/* BOTTOM COPYRIGHT & METADATA BAR */}

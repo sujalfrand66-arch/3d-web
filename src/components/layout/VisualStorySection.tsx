@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -114,7 +114,7 @@ export function VisualStorySection() {
               >
                 <img
                   src={item.img}
-                  alt={item.title}
+                  alt={`${item.title} — Digital architecture and creative design by XWEBSITEWALA`}
                   className="w-full h-full object-cover object-center pointer-events-none select-none block"
                   loading="lazy"
                 />
