@@ -6,8 +6,10 @@ import { ApproachSection } from "./components/layout/ApproachSection";
 import { WhyChooseUsSection } from "./components/layout/WhyChooseUsSection";
 import { ProjectsSection } from "./components/layout/ProjectsSection";
 import { ServicesSection } from "./components/layout/ServicesSection";
-import { VisualStorySection } from "./components/layout/VisualStorySection";
+
 import { FooterSection } from "./components/layout/FooterSection";
+import { BookProjectSection } from "./components/layout/BookProjectSection";
+import { AppointmentPopup } from "./components/layout/AppointmentPopup";
 import { SEO_PAGES } from "./data/seoPages";
 import { SeoSubPage } from "./pages/SeoSubPage";
 
@@ -58,11 +60,14 @@ function App() {
       {/* 05 — SERVICES (Premium Interactive Service List + Hover Preview) */}
       <ServicesSection />
 
-      {/* 06 — PHOTOS / VISUAL STORY */}
-      <VisualStorySection />
+      {/* 06 — BOOK A PROJECT (Premium Appointment + WhatsApp CTA) */}
+      <BookProjectSection />
 
-      {/* 07 — FOOTER (Premium Editorial Footer) */}
+      {/* 08 — FOOTER (Premium Editorial Footer) */}
       <FooterSection />
+
+      {/* Instagram Ad Flow: Website-entry appointment popup (session-once) */}
+      <AppointmentPopup />
     </SmoothScroll>
   );
 }
