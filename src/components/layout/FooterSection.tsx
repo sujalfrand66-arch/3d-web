@@ -4,11 +4,38 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const PAGES_LINKS = [
+  { label: "HOME", target: "#hero-section" },
+  { label: "ABOUT", target: "#approach-section" },
+  { label: "WHY CHOOSE US", target: "#why-choose-us-section" },
+  { label: "PROJECTS", target: "#projects-section" },
+  { label: "SERVICES", target: "#services-section" },
+  { label: "CONTACT", target: "#footer-section" },
+];
+
+const SOCIAL_LINKS = [
+  { label: "INSTAGRAM", url: "https://instagram.com/sujalfrand" },
+  { label: "FACEBOOK", url: "https://facebook.com/XWEBSITEWALA" },
+  { label: "GITHUB", url: "https://github.com/sujalfrand66-arch" },
+  { label: "WHATSAPP", url: "https://wa.me/919983853091" },
+];
+
+const SERVICES_LINKS = [
+  { label: "WEB DESIGN", target: "#services-section" },
+  { label: "WEB DEVELOPMENT", target: "#services-section" },
+  { label: "UI / UX DESIGN", target: "#services-section" },
+  { label: "E-COMMERCE", target: "#services-section" },
+  { label: "SEO", target: "#services-section" },
+  { label: "CUSTOM WEB EXPERIENCES", target: "#services-section" },
+];
+
 export function FooterSection() {
   const footerRef = useRef<HTMLElement>(null);
-  const infoRowRef = useRef<HTMLDivElement>(null);
-  const giantTextWrapperRef = useRef<HTMLDivElement>(null);
-  const giantTextInnerRef = useRef<HTMLHeadingElement>(null);
+  const colBrandRef = useRef<HTMLDivElement>(null);
+  const colPagesRef = useRef<HTMLDivElement>(null);
+  const colSocialsRef = useRef<HTMLDivElement>(null);
+  const colServicesRef = useRef<HTMLDivElement>(null);
+  const giantTextRef = useRef<HTMLHeadingElement>(null);
   const bottomBarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -16,51 +43,72 @@ export function FooterSection() {
     if (!footer) return;
 
     const ctx = gsap.context(() => {
+      const isMobile = window.innerWidth < 768;
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: footer,
-          start: "top 80%",
+          start: "top 85%",
           toggleActions: "play none none reverse",
         },
       });
 
-      // 1. Top Info Row Reveal
-      if (infoRowRef.current) {
-        tl.fromTo(
-          infoRowRef.current,
-          { opacity: 0, y: 25 },
-          { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
-          0
-        );
-      }
+      // 1. Top Content Columns Reveal (Brand -> Pages -> Socials -> Services)
+      const columns = [
+        colBrandRef.current,
+        colPagesRef.current,
+        colSocialsRef.current,
+        colServicesRef.current,
+      ].filter(Boolean);
 
-      // 2. Huge XWEBSITEWALA Typography Masked Reveal
-      if (giantTextWrapperRef.current && giantTextInnerRef.current) {
+      tl.fromTo(
+        columns,
+        {
+          opacity: 0,
+          y: isMobile ? 20 : 35,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: "power3.out",
+          stagger: 0.1,
+        },
+        0
+      );
+
+      // 2. Giant Typography Reveal (Editorial, Heavy, Smooth)
+      if (giantTextRef.current) {
         tl.fromTo(
-          giantTextWrapperRef.current,
-          { clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" },
+          giantTextRef.current,
           {
-            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-            duration: 1.2,
+            yPercent: isMobile ? 70 : 100,
+            opacity: 0,
+          },
+          {
+            yPercent: 0,
+            opacity: 1,
+            duration: 1.3,
             ease: "expo.out",
           },
-          0.2
-        );
-
-        tl.fromTo(
-          giantTextInnerRef.current,
-          { yPercent: 100, opacity: 0 },
-          { yPercent: 0, opacity: 1, duration: 1.25, ease: "expo.out" },
-          0.2
+          0.3
         );
       }
 
-      // 3. Bottom Copyright Line Reveal
+      // 3. Subtle Bottom Divider & Metadata Reveal
       if (bottomBarRef.current) {
         tl.fromTo(
           bottomBarRef.current,
-          { opacity: 0, y: 15 },
-          { opacity: 0.6, y: 0, duration: 0.6, ease: "power2.out" },
+          {
+            opacity: 0,
+            y: 15,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            ease: "power2.out",
+          },
           0.6
         );
       }
@@ -69,102 +117,155 @@ export function FooterSection() {
     return () => ctx.revert();
   }, []);
 
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    target: string
+  ) => {
+    e.preventDefault();
+    if (target === "#hero-section") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    const el = document.querySelector(target);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer
       ref={footerRef}
       id="footer-section"
-      className="relative w-full bg-[#7a0000] text-white select-none pt-16 sm:pt-24 lg:pt-32 pb-8 sm:pb-12 px-4 sm:px-8 md:px-16 lg:px-24 flex flex-col justify-between overflow-hidden border-t border-white/20"
+      className="relative w-full bg-[#050505] text-white select-none pt-16 sm:pt-24 lg:pt-32 pb-8 sm:pb-12 px-6 sm:px-10 md:px-14 lg:px-20 flex flex-col justify-between overflow-hidden border-t border-white/[0.08]"
       style={{ maxWidth: "100vw", overflowX: "hidden" }}
     >
       <div className="max-w-7xl mx-auto w-full flex-1 flex flex-col justify-between">
-        
-        {/* TOP INFORMATION ROW (3-Column Layout on Desktop) */}
-        <div
-          ref={infoRowRef}
-          className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-12 sm:pb-16 border-b border-white/20 items-start"
-        >
-          {/* LEFT: Location & Studio Info (Span 4) */}
-          <div className="md:col-span-4 flex flex-col space-y-2">
-            <h3 className="font-display font-black text-xl sm:text-2xl tracking-tight uppercase">
-              XWEBSITEWALA
-            </h3>
-            <p className="font-sans text-xs sm:text-sm tracking-[0.2em] uppercase opacity-75 font-medium leading-relaxed">
-              SURATGARH, RAJASTHAN<br />
-              INDIA &mdash; 335804
+        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            TOP FOOTER LAYOUT (4-Column Structure with Generous Spacing)
+            Desktop: Brand (~30%) + Pages (~23%) + Socials (~23%) + Services (~24%)
+            Mobile: Stacked cleanly with comfortable vertical spacing
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+        <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr_1fr] gap-10 md:gap-8 lg:gap-12 pb-14 sm:pb-20 items-start">
+          {/* COLUMN 01: BRAND & STUDIO INFO */}
+          <div
+            ref={colBrandRef}
+            className="flex flex-col justify-between space-y-6 md:pr-4"
+          >
+            <div>
+              <h3 className="font-display font-black text-xl sm:text-2xl lg:text-3xl tracking-tight uppercase text-white">
+                XWEBSITEWALA
+              </h3>
+              <p className="font-sans text-[11px] sm:text-xs tracking-[0.25em] uppercase text-white/50 font-medium mt-2.5">
+                SURATGARH, RAJASTHAN, INDIA
+              </p>
+            </div>
+
+            <p className="font-sans text-xs tracking-wider text-white/40 leading-relaxed font-light hidden md:block">
+              &copy; 2026 XWEBSITEWALA.
+              <br />
+              All rights reserved.
             </p>
           </div>
 
-          {/* CENTER: Editorial Mission Statement (Span 5) */}
-          <div className="md:col-span-5 flex flex-col justify-center">
-            <p className="font-sans text-xs sm:text-sm lg:text-base leading-relaxed opacity-85 font-light max-w-prose">
-              We design and build modern digital experiences for businesses, brands and people who want their website to feel different.
-            </p>
+          {/* COLUMN 02: PAGES */}
+          <div ref={colPagesRef} className="flex flex-col space-y-3 sm:space-y-4">
+            <span className="font-sans text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase text-white/35">
+              PAGES
+            </span>
+            <ul className="flex flex-col space-y-2.5 sm:space-y-3 font-sans text-xs sm:text-[13px] tracking-[0.18em] uppercase font-medium">
+              {PAGES_LINKS.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.target}
+                    onClick={(e) => handleSmoothScroll(e, link.target)}
+                    className="text-white/70 hover:text-white inline-flex items-center transition-all duration-200 hover:translate-x-1.5 focus-visible:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/40"
+                  >
+                    <span>{link.label}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* RIGHT: Direct Social & Contact Links (Span 3) */}
-          <div className="md:col-span-3 flex flex-col space-y-3 sm:space-y-4 font-sans text-xs sm:text-sm tracking-[0.25em] uppercase font-bold text-left md:text-right">
-            <a
-              href="https://wa.me/919983853091"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-60 hover:translate-x-1 md:hover:-translate-x-1 transition-all duration-300 inline-flex items-center gap-1.5 justify-start md:justify-end"
-            >
-              <span>WHATSAPP</span>
-              <span className="text-xs">&nearr;</span>
-            </a>
-            <a
-              href="https://instagram.com/sujalfrand"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-60 hover:translate-x-1 md:hover:-translate-x-1 transition-all duration-300 inline-flex items-center gap-1.5 justify-start md:justify-end"
-            >
-              <span>INSTAGRAM</span>
-              <span className="text-xs">&nearr;</span>
-            </a>
-            <a
-              href="https://facebook.com/XWEBSITEWALA"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-60 hover:translate-x-1 md:hover:-translate-x-1 transition-all duration-300 inline-flex items-center gap-1.5 justify-start md:justify-end"
-            >
-              <span>FACEBOOK</span>
-              <span className="text-xs">&nearr;</span>
-            </a>
-            <a
-              href="https://github.com/sujalfrand66-arch"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-60 hover:translate-x-1 md:hover:-translate-x-1 transition-all duration-300 inline-flex items-center gap-1.5 justify-start md:justify-end"
-            >
-              <span>GITHUB</span>
-              <span className="text-xs">&nearr;</span>
-            </a>
+          {/* COLUMN 03: SOCIALS */}
+          <div ref={colSocialsRef} className="flex flex-col space-y-3 sm:space-y-4">
+            <span className="font-sans text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase text-white/35">
+              SOCIALS
+            </span>
+            <ul className="flex flex-col space-y-2.5 sm:space-y-3 font-sans text-xs sm:text-[13px] tracking-[0.18em] uppercase font-medium">
+              {SOCIAL_LINKS.map((social) => (
+                <li key={social.label}>
+                  <a
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group text-white/70 hover:text-white inline-flex items-center gap-1 transition-all duration-200 hover:translate-x-1.5 focus-visible:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/40"
+                  >
+                    <span>{social.label}</span>
+                    <span className="text-[11px] inline-block transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                      &#8599;
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* COLUMN 04: SERVICES */}
+          <div
+            ref={colServicesRef}
+            className="flex flex-col space-y-3 sm:space-y-4"
+          >
+            <span className="font-sans text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase text-white/35">
+              SERVICES
+            </span>
+            <ul className="flex flex-col space-y-2.5 sm:space-y-3 font-sans text-xs sm:text-[13px] tracking-[0.18em] uppercase font-medium">
+              {SERVICES_LINKS.map((service) => (
+                <li key={service.label}>
+                  <a
+                    href={service.target}
+                    onClick={(e) => handleSmoothScroll(e, service.target)}
+                    className="text-white/70 hover:text-white inline-flex items-center transition-all duration-200 hover:translate-x-1.5 focus-visible:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/40"
+                  >
+                    <span>{service.label}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        {/* MASSIVE EDITORIAL TYPOGRAPHY: XWEBSITEWALA */}
+        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            GIANT BRAND TYPOGRAPHY: XWEBSITEWALA
+            Main visual feature: Subdued, low-contrast (#181818),
+            editorial clamp sizing, tight tracking, spanning full width
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
         <div
-          ref={giantTextWrapperRef}
-          className="relative w-full overflow-hidden my-12 sm:my-16 lg:my-24 py-4 flex items-center justify-center pointer-events-none select-none"
-          style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" }}
+          className="relative w-full overflow-hidden my-8 sm:my-12 lg:my-16 py-2 sm:py-4 flex items-center justify-center pointer-events-none select-none"
+          aria-hidden="true"
         >
           <h2
-            ref={giantTextInnerRef}
-            className="font-display font-black text-[14.5vw] sm:text-[16.5vw] lg:text-[18.5vw] leading-[0.8] tracking-tighter uppercase text-white text-center whitespace-nowrap block"
+            ref={giantTextRef}
+            className="font-display font-black text-[12.8vw] sm:text-[13.5vw] lg:text-[14vw] leading-[0.82] tracking-tighter uppercase text-[#181818] text-center whitespace-nowrap block select-none"
+            style={{
+              letterSpacing: "-0.04em",
+              willChange: "transform, opacity",
+            }}
           >
             XWEBSITEWALA
           </h2>
         </div>
 
-        {/* BOTTOM COPYRIGHT & METADATA BAR */}
+        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            FOOTER BOTTOM LINE (Quiet Editorial Metadata & Divider)
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
         <div
           ref={bottomBarRef}
-          className="flex flex-col sm:flex-row justify-between items-center text-[8.5px] sm:text-[10px] font-sans tracking-[0.2em] uppercase pt-6 border-t border-white/20 gap-2 opacity-60"
+          className="flex flex-col sm:flex-row justify-between items-center text-[9px] sm:text-[10.5px] font-sans tracking-[0.22em] uppercase pt-6 sm:pt-8 border-t border-white/[0.08] gap-3 text-white/40"
         >
-          <span>&copy; {new Date().getFullYear()} XWEBSITEWALA &mdash; ALL RIGHTS RESERVED</span>
-          <span>SUJAL FRAND &times; ANMOL FRAND</span>
+          <span>&copy; 2026 XWEBSITEWALA</span>
+          <span>CRAFTED IN SURATGARH, RAJASTHAN</span>
         </div>
-
       </div>
     </footer>
   );
